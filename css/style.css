@@ -1,0 +1,4157 @@
+/*CSS Reset / Normalize*/
+/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
+en las secciones señaladas */
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+:root{
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+   --cor-de-fundo: #F5F5F5;
+   --cor-de-link: #000;
+}
+body {
+    font-size: 16px; /* Tamaño base de fuente para toda la página */
+    overflow-x: hidden; /* Oculta la barra de desplazamiento vertical */
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo) ;
+    font-family: 'Raleway';
+   
+    
+}
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+
+/* Estilos generales para todo el contenido de la página */
+.tudo {
+    display: flex; /* Usando Flexbox para alinear contenido */
+    flex-direction: column; /* Alinear elementos verticalmente */
+    align-items:baseline; /* Centrar elementos horizontalmente */
+    /* Otros estilos generales para el contenido de la página */
+}
+
+/* Estilos específicos para la barra de navegación */
+/* Estilos para el menú */
+.menu {
+    display: flex; 
+    width: 92%; 
+    margin: 0% 4% 2% 4%;
+    align-items: center; 
+    justify-content: space-between; 
+    position: fixed;
+    top: 0;
+    background-color: #FFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.menu__header {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.menu__header img {
+    margin-right: 20px;
+}
+
+.menu__title {
+    margin-left: 20px;
+}
+
+.menu__list {
+    display: flex;
+    list-style: none;
+    padding: 0 20px;
+    margin: 20px 20px 20px 20px; 
+}
+
+.menu__list__item {
+    margin-right: 20px;
+}
+
+.menu__list__item:last-child {
+    margin-right: 0;
+}
+
+/* Cambia el color de las opciones del menú cuando se coloca el mouse sobre ellas */
+.menu__list__item a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+.menu__list__item a:hover {
+    color: #3498db; /* Cambia a tu color preferido */
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    z-index: 1; 
+    padding: 10px 0;
+    border-radius: 4px; /* Añade bordes redondeados */
+}
+
+.menu__list__item:hover .submenu {
+    display: block; 
+}
+
+.submenu li {
+    list-style: none;
+    padding: 10px 20px; 
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+    display: block;
+}
+
+.submenu li a:hover {
+    color: #3498db; /* Cambia a tu color preferido */
+}
+
+/* Añadir efecto de transición para una mejor presentación */
+.submenu {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.menu__list__item:hover .submenu {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+/* Primer bloque */
+
+/* Estilos para el menú */
+.menu {
+    display: flex; 
+    width: 92%; 
+    margin: 0% 4% 2% 4%;
+    align-items: center; 
+    justify-content: space-between; 
+    position: fixed;
+    top: 0;
+    background-color: #FFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.menu__header {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.menu__header img {
+    margin-right: 20px;
+}
+
+.menu__title {
+    margin-left: 20px;
+}
+
+.menu__list {
+    display: flex;
+    list-style: none;
+    padding: 0 20px;
+    margin: 20px 20px 20px 20px; 
+}
+
+.menu__list__item {
+    margin-right: 20px;
+}
+
+.menu__list__item:last-child {
+    margin-right: 0;
+}
+
+/* Cambia el color de las opciones del menú cuando se coloca el mouse sobre ellas */
+.menu__list__item a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+}
+
+.menu__list__item a:hover {
+    color: #3498db; /* Cambia a tu color preferido */
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    z-index: 1; 
+    padding: 10px 0;
+    border-radius: 4px; /* Añade bordes redondeados */
+}
+
+.menu__list__item:hover .submenu {
+    display: block; 
+}
+
+.submenu li {
+    list-style: none;
+    padding: 10px 20px; 
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+    display: block;
+}
+
+.submenu li a:hover {
+    color: #3498db; /* Cambia a tu color preferido */
+}
+
+/* Añadir efecto de transición para una mejor presentación */
+.submenu {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.menu__list__item:hover .submenu {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos adicionales para hover en los enlaces de la sección de títulos */
+.title {
+    display: flex;
+    width: 88%;
+    margin: 0% 4% 2% 4%;
+    margin-top: 6%;
+    padding: 2%;
+    padding-bottom: 1%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 10px 0px 10px -10px rgba(0, 0, 0, 0.1),
+                -10px 0px 10px -10px rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.title__div {
+    display: flex;
+    align-items: center;
+    margin-top: 6%;
+}
+
+.title__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: flex-start;
+}
+
+.title__bio {
+    margin-right: 20px;
+    margin-bottom: 0%;
+    font-size: 200%;
+    margin-inline-start: 6%;
+    margin-inline-end: 3%;
+    shape-outside: circle(100%);
+}
+
+.subtitle {
+    font-size: 188%;
+    text-align: justify;
+    display: flex;
+    margin-block-start: 0%;
+    margin-block-end: 0%;
+    margin-inline-start: 6%;
+    margin-inline-end: 3%;
+}
+
+.title__subsection {
+    margin-inline-start: 6%;
+    margin-inline-end: 8%;
+    font-size: 1.5em;
+    margin-bottom: 2%;
+}
+
+.title__network {
+    margin-top: 70px;
+    display: flex; 
+    align-items: center;
+    gap: 60px;
+    margin-inline-start: 5%;
+    margin-inline-end: 25%;
+}
+
+.title__network__item {
+    list-style: none;
+}
+
+.title__network__item a {
+    text-decoration: none;
+    color: rgba(199, 120, 221, 1);
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.title__network__item a:hover {
+    color: #3498db; /* Cambia a tu color preferido */
+}
+
+.title__profile {
+    width: 25%;
+    margin: -4% 2% 8% 0; 
+    border-radius: 200%;
+    clip-path: circle(200%);
+}
+
+
+
+/* Sección "Sobre mi" */
+
+.about {
+    display: flex;
+    width: 88%;
+    /* max-width: 1250px; */
+    margin: 0% 4% 2% 4%;
+    margin-top: 1%;
+    padding: 2%;
+    background-color:rgba(234, 242, 253, 1);
+    border-top: none;
+    border-bottom: none;
+    box-shadow: 10px 0px 10px -10px rgba(0, 0, 0, 0.1),
+                -10px 0px 10px -10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.about__container {
+    width: 100%; /* Ajusta el ancho del contenedor de texto según sea necesario */
+    display: flex;
+    flex-wrap: nowrap; /* Evita que las imágenes se envuelvan a la siguiente línea */
+    justify-content: space-between; /* Distribuye las imágenes de manera uniforme a lo largo del contenedor */
+    align-items: center; /* Alinea las imágenes verticalmente */
+}
+
+
+.about a{
+    display: flex; 
+}
+
+.about__title{
+    display: flex; 
+    margin-inline-start: 30%;
+    margin-inline-end: 0%;
+}
+
+.about p {
+    display: flex;
+    margin-block-start: 4%;
+    margin-block-end: 4%;
+    margin-inline-start: 30%;
+    margin-inline-end: -2%;
+    text-align: justify;
+}
+
+.about__img {
+    width: 48%; /* Ajusta el ancho de las imágenes según sea necesario */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.about__img1{
+    width: 300%;
+    height: auto;
+    margin: 0% 0% 0% 12%;
+}
+
+.about__img3{
+    width: 16%;
+    height: auto;
+    margin: 0% 4% 0% -4%;
+
+}
+
+
+
+/* Seccion Skills */
+
+
+.skills__title {  /* Titulo Skills */
+    display: flex;
+    margin-inline: 49%;
+    font-size: 125%;
+}
+.skills {
+    display: inline; /* Por modificar */
+}
+
+.skills__line {
+    
+    display: flex;
+    justify-content: center;
+    margin: 4% 2% 4% -4%;
+}
+
+
+.skills__box {
+    display: flex;
+    width: 15%;
+    /* max-width: 1250px; */
+    margin: 2% 4% 2% 4%;
+    margin-top: 1%;
+    padding: 1% 1% 1% 1%;
+    padding-bottom: 1%;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 5px 0px 5px -5px rgba(0, 0, 0, 0.1),
+                -5px 0px 5px -5px rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+    margin-bottom: 0;
+    width: calc(10% - 0px); /* Aproximadamente 1/6 del ancho total, restando 10px de espacio entre ellos */
+    margin-right: -2%; /* Espacio entre los recuadros */
+    text-align: center;
+    box-sizing: border-box;
+    height: 200px;
+    width: 200px; 
+}
+
+
+.skills__box:nth-child(1) img {
+    width: 40%;
+    margin: 140% 0 50% -200%;
+}
+
+.skills__box:nth-child(1) .skills__name {
+    margin: -20% 0 -200% -128%;
+    /* Estilos específicos para el nombre de la primera habilidad */
+}
+
+.skills__box:nth-child(2) img {
+    width: 30%;
+    margin: 110% 0 50% -180%
+    
+}
+
+.skills__box:nth-child(2) .skills__name {
+    margin: -25% 0 -200% -108%;
+}
+
+
+.skills__box:nth-child(3) img {
+    width: 40%;
+    margin: 160% 0 20% -220%
+    
+}
+
+.skills__box:nth-child(3) .skills__name {
+    margin: 22% 0 -40% -180%;
+}
+
+
+
+.skills__box:nth-child(4) img {
+    width: 50%;
+    margin: 170% 0 50% -160%
+    
+}
+
+.skills__box:nth-child(4) .skills__name {
+    margin: 20% 0 -220% -120%;
+}
+
+.skills__box:nth-child(5) img {
+    width: 30%;
+    margin: 75% 0 0% -130%;
+}
+
+.skills__box:nth-child(5) .skills__name {
+    margin: 20% 0 0% -60%;
+    /* Estilos específicos para el nombre de la primera habilidad */
+}
+
+.skills__box:nth-child(6) img {
+    width: 60%;
+    margin: 245% 0 0% -250%
+    
+}
+
+.skills__box:nth-child(6) .skills__name {
+    margin: 70% 0 0% -220%;
+}
+
+
+
+.skills__name {
+    margin-top: 40px; /* Espacio entre la imagen y el nombre */
+    font-weight: bold;
+}
+
+
+/* Seccion Hobbies */
+
+
+
+.hobbies__title {
+
+    display: flex;
+    margin-inline: 48%;
+    font-size: 125%;
+}
+
+.hobbies {
+    display: inline; /* Por modificar */
+}
+
+.hobbies__line {
+    
+    display: flex;
+    justify-content: center;
+    margin: 4% 2% 4% -4%;
+}
+
+.hobbies__box {
+    display: flex;
+    width: 15%;
+    /* max-width: 1250px; */
+    margin: 2% 4% 2% 4%;
+    margin-top: 1%;
+    padding: 1% 1% 1% 1%;
+    padding-bottom: 1%;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 5px 0px 5px -5px rgba(0, 0, 0, 0.1),
+                -5px 0px 5px -5px rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+    margin-bottom: 0;
+    width: calc(10% - 0px); /* Aproximadamente 1/6 del ancho total, restando 10px de espacio entre ellos */
+    margin-right: -2%; /* Espacio entre los recuadros */
+    text-align: center;
+    box-sizing: border-box;
+    height: 200px;
+    width: 200px; 
+}
+
+.hobbies__box:nth-child(1) img {
+    width: 55%;
+    margin: 140% 0% 50% -170%;
+}
+
+.hobbies__box:nth-child(1) .hobbies__name {
+    margin: -20% 0% -200% -128%;
+}
+
+
+.hobbies__box:nth-child(2) img {
+   width: 100%; 
+   margin: 80% 0% 50% -120%;
+}
+
+.hobbies__box:nth-child(2) .hobbies__name {
+    margin: -20% 0% -200% -128%;
+}
+
+
+.hobbies__box:nth-child(3) img {
+    width: 55%;
+    margin: 75% 0% 50% -150%;  
+}
+
+.hobbies__box:nth-child(3) .hobbies__name {
+    margin: -20% 0% -200% -100%;
+}
+
+
+
+.hobbies__box:nth-child(4) img {
+    width: 55%;
+    margin: 90% 0% 50% -150%;
+    
+}
+
+.hobbies__box:nth-child(4) .hobbies__name {
+    margin: -10% 0% -200% -100%;
+}
+
+.hobbies__box:nth-child(5) img {
+    width: 110%;
+    margin: 180% 0% 40% -150%;  
+}
+
+.hobbies__box:nth-child(5) .hobbies__name {
+    margin: 50% 0% -200% -160%;
+}
+
+.hobbies__box:nth-child(6) img {
+    width: 40%;
+    margin: 60% 0% 50% -130%;
+    
+}
+
+.hobbies__box:nth-child(6) .hobbies__name {
+    margin: -10% 0% -200% -80%;
+}
+
+.hobbies__name {
+    font-weight: bold;
+}
+
+
+/* <!-- Sección de Formación académica --> */
+
+.academic {
+    display: flex;
+    flex-direction: column;
+    width: 88%;
+    margin: 0% 4% 2% 4%;
+    margin-top: 1%;
+    padding: 2%;
+    background-color: rgba(234, 242, 253, 1);
+    border-top: none;
+    border-bottom: none;
+    box-shadow: 10px 0px 10px -10px rgba(0, 0, 0, 0.1),
+                -10px 0px 10px -10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.academic__courses {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Envuelve los elementos si no caben en una línea */
+}
+
+.academic__courses__box {
+    width: 30%; /* Ancho inicial */
+    margin-bottom: 20px; /* Espacio entre cada elemento */
+    /* Agrega otras propiedades según sea necesario */
+}
+
+.academic__courses__box img {
+    width: 80%;
+    margin-bottom: 10px; /* Espacio entre la imagen y la descripción */
+}
+
+.academic__courses__item {
+    display: flex;
+    flex-direction: column; /* Cambia a diseño de columna */
+    align-items: center;
+    text-align: center; /* Centra el texto */
+}
+
+.academic__courses__item__description {
+    text-align: center;
+}
+
+
+/* Sección Experiencia */
+/* Valia */
+@keyframes pokerAnimation {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Clase para aplicar la animación */
+.animated {
+    animation: pokerAnimation 0.8s ease-in-out forwards;
+}
+
+.experience__section__outer {
+    transition: transform 0.3s ease-in-out;
+    display: inline-block; /* Asegura que los elementos sean en línea-bloque para que se comporten como cartas */
+  }
+  
+  /* Animación al pasar el ratón */
+  .experience__section__outer:hover {
+    transform: translateX(20px); /* Mueve 20px a la derecha */
+  }
+
+.experience__section{
+    text-align: center;
+}
+.experience__section__title { 
+    white-space: nowrap; /* Titulo Skills */
+    display: flex;
+    margin-inline: 44.5%;
+    font-size: 125%;
+    margin-bottom: 2%;
+   
+}
+.experience h2 {
+    white-space: nowrap; /* Titulo Skills */
+    display: flex;
+    margin-inline-start: -2%;
+    font-size: 125%;
+}
+
+h2 {
+    margin-bottom: 6%;
+}
+
+.experience__Valia { /* title */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2% 0;
+    padding: 2%;
+    border-top: none;
+    border-bottom: none;
+    align-items: center;
+    border-radius: 10px;
+}
+
+
+.experience__section__outer__valia{
+    display: flex;
+    flex-direction: row;
+    margin-inline-start: 2%;
+    width: 74%;
+    margin: 0% 0% 2% 0%;
+    padding: 5% 0% 4% 0%;
+    background-color: rgba(48, 225, 144, 1);
+    align-items: center;
+    box-shadow: 15px 15px 15px -15px rgba(0, 0, 0, 0.1),
+                -15px 15px 15px -15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Transición suave para transformaciones */
+    
+}
+
+.experience__section__outer__valia.hover-effect {
+
+    margin-inline-start: -4%;
+   background-color: rgb(143, 255, 205);
+   transition: transform 0.3s ease; /* Transición suave para transformaciones */
+ } 
+
+
+
+
+
+
+
+.experience__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2%;
+    
+}
+
+
+
+
+.experience__box__valia {
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* max-width: 1250px; */
+    margin:  -3% 4% -8% -4%;
+    padding: 4% 0% 5% 0%;
+    flex-direction: row;
+    background-color: #f9f9f9;  
+    align-items: center; /* Alinea las imágenes verticalmente */
+    box-shadow: 15px 15px 15px -15px rgba(0, 0, 0, 0.1),
+                -15px 15px 15px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Transición suave para transformaciones */
+
+}
+
+.experience__box__valia:hover {
+    box-shadow: 8px -8px 8px rgba(48, 225, 144, 0.3),
+                9px -9px 9px rgba(48, 225, 144, 0.2),
+                10px -10px 10px rgba(48, 225, 144, 0.1),
+                11px -11px 11px rgba(48, 225, 144, 0.05);
+}
+.experience__box__valia.hover-effect {
+    transition: transform 0.3s ease; /* Transición suave para transformaciones */
+    transform-origin: 50% 0%; /* Punto de origen en el centro */
+    transform: translate3d(74px, -60px, 50px); /* Movimiento en 3D */
+}
+
+.experience__img__valia {
+    width: 50%; /* Ajusta el ancho de las imágenes según sea necesario */
+    height: auto;
+    margin: 2% 0 2% 0;
+    margin-inline-start: 1%;
+    margin-right: 10%;
+
+}
+
+.experience__box {
+    width: 48%; /* Distribución en horizontal con un margen más pequeño */
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.experience__img {
+    max-width: 100%; /* La imagen ocupará todo el ancho disponible */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.experience__section__outer__valia:hover .experience__img__valia {
+    transform: scale(0.9); /* Reduce el tamaño de la imagen al hacer hover */
+}
+
+.experience__info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.experience__title {
+    margin-bottom: 5px;
+}
+
+.experience__text {
+    margin-bottom: 20%;
+}
+
+.experience__description {
+    display: flex;
+    align-items: center;
+}
+
+.experience__buttons {
+    display: flex; /* Alinear botones en fila */
+    justify-content: center; /* Centrar botones horizontalmente */
+    margin-bottom: 10px; /* Espacio debajo de los botones */
+}
+
+.experience__extra__valia-button {
+    display: flex; /* Alinear el botón extra en fila */
+    margin-top: 2%;
+    justify-content: center; /* Centrar el botón horizontalmente */
+}
+
+.experience__botao--repo,
+.experience__botao--demo__valia,
+.experience__botao--extra__valia {
+    background-color: white;
+    color: rgba(42, 122, 228, 1);
+    border: 1px solid rgba(42, 122, 228, 1);
+    padding: 5px 10px;
+    margin: 0 10px; /* Aumentar espacio entre los botones */
+    border-radius: 6%;
+    transition: box-shadow 0.3s ease;
+    padding: 10px; 
+    width: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.experience__botao--demo__valia {
+    background-color: rgba(42, 122, 228, 1);
+    color: white;
+    box-shadow: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.experience__botao--extra__valia {
+    background-color: rgba(48, 225, 144, 1);
+    color: white;
+    border:rgba(48, 225, 144, 1);
+    width: auto;
+}
+
+.experience__botao--repo:hover,
+.experience__botao--demo__valia:hover,
+.experience__botao--extra__valia:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+}
+
+.experience__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Espacio entre las columnas */
+    margin-top: 5px;
+    padding-left: 20px;
+    margin-top: 0px;
+    padding-left: 40px;
+}
+
+.experience__list li {
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
+.experience__description__ns{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* <---------Hey Banco----------> */
+
+/* Contenedor externo */
+.experience__section__inner__heyBanco {
+    width: 90%;
+}
+
+.experience__container__heyBanco{
+margin-inline-start: 6%;
+}
+
+.experience__section__outer__heyBanco {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 8% 0% 0% 6%;
+    padding: 4% 1% 2% 0%;
+    background-color: rgba(9, 14, 34, 0.9);
+    align-items: center;
+    box-shadow: 15px 0px 15px -15px rgba(0, 0, 0, 0.1),
+                -15px 0px 15px -15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Transición suave para transformaciones */
+   
+}
+
+.experience__section__outer__heyBanco.hover-effect  {
+    /* margin-inline-start: 8%; */
+    /* padding: 4% 2% 2% 1%; */
+    margin-top: 8%;
+    background-color:rgba(40, 50, 70, 0.9);
+    margin-inline-start: 9%;
+    /* transform: translatey(-5px);  */
+    /* transform: translatex(-60px);  */
+    
+    
+}
+
+.experience__section__outer__heyBanco:hover .experience__img__heyBanco {
+    transform: scale(0.9); /* Reduce el tamaño de la imagen al hacer hover */
+}
+
+
+.experience__section__heyBanco {
+    display: flex;
+    flex-direction: row;
+    width: 96%;
+    margin: -2% 0% -8% 6%;
+    padding:4% 6% 4% 8%;
+    background-color: #f9f9f9;
+    align-items: center;
+    box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.1),
+                -15px 15px 15px -15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Transición suave para transformaciones */
+
+    
+}
+
+.experience__section__heyBanco:hover {
+    box-shadow: 
+        -5px -5px 5px rgba(96, 120, 216, 0.9),
+        -6px -6px 6px rgba(96, 120, 216, 0.8),
+        -7px -7px 7px rgba(96, 120, 216, 0.7),
+        -8px -8px 8px rgba(96, 120, 216, 0.6);
+}
+
+.experience__section__heyBanco.hover-effect {
+   /* width: 84%;
+    margin: -2% 0% -8% 0%;
+    padding:2% 13% 2% 11%; */
+    /* margin-inline-start: 4%; */
+    transform: translate3d(-90px,-100px, 0px); /* Movimiento en 3D */
+    
+}
+
+
+
+
+.experience__img__heyBanco {
+    width: 55%;
+    height: auto;
+    margin: 2% 0% 2% 8%;
+    border-radius: none;
+    box-shadow: none;
+    transition: transform 0.3s ease; /* Transición para suavizar la reducción de la imagen */
+}
+
+.experience__info-container__heyBanco {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    margin-left: -8% ;
+    align-items: center;
+    text-align: center;
+    width: 50%; /* Ajusta el ancho del contenedor de información */
+}
+
+.experience__title {
+    margin-bottom: 5px;
+}
+
+.experience__text {
+    margin-bottom: 20px;
+}
+
+.experience__description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.experience__extra-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.experiencia__botao--repo__heyBanco,
+.experience__botao--demo__heyBanco,
+.experience__botao--extra__heyBanco{
+    background-color: white;
+    margin: 5px;
+    color: rgba(42, 122, 228, 1);
+    border: 1px solid rgba(42, 122, 228, 1);
+    padding: 12px 10px;
+    border-radius: 4%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    padding: 10px; 
+    width: auto;
+}
+
+.experience__botao--demo__heyBanco{
+    background-color: rgba(42, 122, 228, 1);
+    color: white;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience__botao--extra__heyBanco{
+    background-color: rgba(9, 14, 34, 1);
+    border: rgba(9, 14, 34, 1);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experiencia__botao--repo__heyBanco:hover,
+.experience__botao--demo__heyBanco:hover,
+.experience__botao--extra__heyBanco:hover {
+    
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.experience__list {
+    margin-top: 2px;
+    padding-left: 20px;
+    list-style-type: none; /* Quitar la lista predeterminada */
+    columns: 2; /* Mostrar en dos columnas */
+}
+
+.experience__list li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px; /* Espacio para el punto personalizado */
+}
+
+
+
+/* <------------Front End-------------> */
+
+/* <------------Número Secreto-------------> */
+
+.experience__section__inner__BA {
+    width: 88%;
+}
+
+.experience__container__BA{
+    margin-inline-start: -0.1%;
+}
+
+
+.experience__box__ns h2 {
+    margin: 3% 0% 3% 3%;
+    white-space: nowrap; /* Titulo Skills */
+    font-size: 130%;
+    margin-inline-start: 48%;
+    border-radius: 4%;
+}
+
+.experience__section__ns{
+    text-align: center;
+}
+.experience__section__title__ns { 
+    white-space: nowrap; /* Titulo Skills */
+    display: flex;
+    margin-inline: 44%;
+    font-size: 125%;
+   
+}
+.experience__ns h2 {
+    margin: 4% 0% 4% 0%;
+    white-space: nowrap; /* Titulo Skills */
+    display: flex;
+    margin-inline-start: -2%;
+    font-size: 125%;
+}
+
+.experience__ns { /* title */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2% 0;
+    padding: 2%;
+    border-top: none;
+    border-bottom: none;
+    align-items: center;
+    border-radius: 10px;
+}
+
+
+.experience__section__outer__ns{
+    display: flex;
+    flex-direction: row;
+    width: 76%;
+    margin: 0% 0 2% 0%;
+    padding: 5% 0% 4% 0%;
+    margin-inline-start: 1%;
+    background-color: rgba(195, 86, 210, 1);
+    align-items: center;
+    box-shadow: 15px 15px 15px -15px rgba(0, 0, 0, 0.1),
+                -15px 15px 15px -15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Transición suave para transformaciones */
+}
+
+.experience__section__outer__ns.hover-effect {
+    margin-inline-start: -4%; 
+    /* padding: 4% 1% 0% .5%; */
+    background-color: rgb(209, 113, 222);
+    transition: transform 0.3s ease; /* Transición suave para transformaciones */
+    
+}
+
+
+
+
+.experience__box__ns{
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* max-width: 1250px; */
+    margin:  -3% 4% -8% -4%;
+    padding: 6% 0% 7% 0%;
+    flex-direction: row;
+    background-color: #f9f9f9;  
+    align-items: center; /* Alinea las imágenes verticalmente */
+    box-shadow: 15px 15px 15px -15px rgba(0, 0, 0, 0.1),
+                -15px 15px 15px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Transición suave para transformaciones */
+}
+
+.experience__box__ns.hover-effect{
+    /*  width: 90%;
+    margin: -2% 0% -4% 0%;
+    padding:6% 2% 4% 1%;
+    margin-inline-start: 4%; */
+    transition: transform 0.3s ease; /* Transición suave para transformaciones */
+    transform-origin: 50% 0%; /* Punto de origen en el centro */
+    transform: translate3d(90px,-70px, 0px); /* Movimiento en 3D */
+}
+
+.experience__box__ns:hover {
+    box-shadow: 8px -8px 8px rgba(195, 86, 210, 0.3),
+                9px -9px 9px rgba(195, 86, 210, 0.2),
+                10px -10px 10px rgba(195, 86, 210, 0.1),
+                11px -11px 11px rgba(195, 86, 210, 0.05);
+}
+
+.experience__img__ns {
+    width: 50%; /* Ajusta el ancho de las imágenes según sea necesario */
+    height: auto;
+    margin: 2% 0 2% 0;
+    margin-inline-start: 6%;
+    margin-right: 6%;
+    border-radius: 4%;
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+    transition: transform 0.3s ease; /* Transición para suavizar el cambio de tamaño de la imagen */
+
+}
+
+.experience__section__outer__ns:hover .experience__img__ns {
+    transform: scale(1.05);
+}
+
+.experience__box {
+    width: 48%; /* Distribución en horizontal con un margen más pequeño */
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.experience__info-container__ns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.experience__title__ns {
+    margin-bottom: 4%;
+}
+
+.experience__text__ns {
+    margin-bottom: 5%;
+}
+
+.experience__description__ns {
+    display: flex;
+    align-items: center;
+}
+
+.experience__buttons__ns {
+    display: flex; /* Alinear botones en fila */
+    justify-content: center; /* Centrar botones horizontalmente */
+    margin-bottom: 10px; /* Espacio debajo de los botones */
+}
+
+.experience__extra__button__ns{
+    display: flex; /* Alinear el botón extra en fila */
+    margin-top: 4%;
+    justify-content: center; /* Centrar el botón horizontalmente */
+}
+
+.experience__botao--repo__ns,
+.experience__botao--demo__ns,
+.experience__botao--extra__ns{
+    background-color: white;
+    color: rgba(42, 122, 228, 1);
+    border: 1px solid rgba(42, 122, 228, 1);
+    padding: 5px 10px;
+    margin: 0 10px; /* Aumentar espacio entre los botones */
+    border-radius: 6%;
+    transition: box-shadow 0.3s ease;
+    padding: 10px; 
+    width: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex; /* Alinear botones en fila */
+    justify-content: center; /* Centrar botones horizontalmente */
+    margin-bottom: 10px; /* Espacio debajo de los botones */
+}
+
+.experience__botao--demo__ns {
+    background-color: rgba(42, 122, 228, 1);
+    color: white;
+    box-shadow: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.experience__botao--extra__ns {
+    background-color: rgba(195, 86, 210, 1);
+    color: white;
+    border:rgba(195, 86, 210, 1);
+    width: auto;
+}
+
+.experience__botao--repo__ns:hover,
+.experience__botao--demo__ns:hover,
+.experience__botao--extra__ns:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+}
+
+.experience__list_ns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Espacio entre las columnas */
+    margin-top: 5px;
+    padding-left: 20px;
+    margin-top: 0px;
+    padding-left: 40px;
+}
+
+.experience__list li {
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
+.experience__description {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* <------------Barberia Alura-------------> */
+
+.experience__section__inner__barberiaAlura {
+    width: 90%;
+}
+
+.experience__container__barberiaAlura{
+    margin-inline-start: 6%;
+}
+
+.experience__section__outer__barberiaAlura {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 8% 0% 0% 6%;
+    padding: 4% 1% 2% 0%;
+    background-color: rgba(255, 165, 0, 1);
+    align-items: center;
+    box-shadow: 15px 0px 15px -15px rgba(0, 0, 0, 0.1),
+                -15px 0px 15px -15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Transición suave para transformaciones */
+
+}
+
+.experience__section__outer__barberiaAlura.hover-effect  {
+    margin-top: 8%;
+    background-color:rgba(255, 165, 0, 1);
+    margin-inline-start: 8%;
+   
+}   
+
+.experience__section__outer__barberiaAlura:hover .experience__img__barberiaAlura {
+    transform: scale(0.9); /* Reduce el tamaño de la imagen al hacer hover */
+}
+    
+.experience__section__barberiaAlura {
+    display: flex;
+    flex-direction: row;
+    width: 96%;
+    margin: -2% 0% -8% 6%;
+    padding:4% 6% 4% 8%;
+    background-color: #f9f9f9;
+    align-items: center;
+    box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.1),
+                -15px 15px 15px -15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Transición suave para transformaciones */
+
+    
+}
+
+.experience__img__barberiaAlura{
+    width: 55%;
+    height: auto;
+    margin: 2% 0% 2% 10%;
+    border-radius: 4%;
+    box-shadow: none;
+    transition: transform 0.3s ease; /* Transición para suavizar la reducción de la imagen */
+}
+
+
+.experience__section__barberiaAlura:hover {
+    box-shadow: 
+        -5px -5px 5px rgba(255, 165, 0, 1),
+        -6px -6px 6px rgba(255, 165, 0, 1),
+        -7px -7px 7px rgba(255, 165, 0, 1),
+        -8px -8px 8px rgba(255, 165, 0, 1);
+}
+
+.experience__section__barberiaAlura.hover-effect {
+    /* width: 84%;
+     margin: -2% 0% -8% 0%;
+     padding:2% 13% 2% 11%; */
+     /* margin-inline-start: 4%; */
+     transform: translate3d(-90px,-100px, 0px); /* Movimiento en 3D */
+     
+ }
+
+.experience__info-container__barberiaAlura {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    margin-left: -8% ;
+    align-items: center;
+    text-align: center;
+    width: 50%; /* Ajusta el ancho del contenedor de información */
+}
+
+.experience__title {
+    margin-bottom: 5px;
+}
+
+.experience__text {
+    margin-bottom: 20px;
+}
+
+.experience__description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.experience__extra-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.experiencia__botao--repo__barberiaAlura,
+.experience__botao--demo__barberiaAlura,
+.experience__botao--extra__barberiaAlura{
+    background-color: white;
+    margin: 5px;
+    color: rgba(42, 122, 228, 1);
+    border: 1px solid rgba(42, 122, 228, 1);
+    padding: 12px 10px;
+    border-radius: 4%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    padding: 10px; 
+    width: auto;
+}
+
+.experience__botao--demo__barberiaAlura{
+    background-color: rgba(42, 122, 228, 1);
+    color: white;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience__botao--extra__barberiaAlura{
+    background-color: rgba(255, 165, 0, 1);
+    border: rgba(255, 165, 0, 1);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experiencia__botao--repo__barberiaAlura:hover,
+.experience__botao--demo__barberiaAlura:hover,
+.experience__botao--extra__barberiaAlura:hover {
+    
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.experience__list {
+    margin-top: 2px;
+    padding-left: 20px;
+    list-style-type: none; /* Quitar la lista predeterminada */
+    columns: 2; /* Mostrar en dos columnas */
+}
+
+.experience__list li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px; /* Espacio para el punto personalizado */
+}
+
+
+/* <!-- Sección de Contacto¡-> */
+
+.formcontato {
+    display: flex;
+    width: 88%;
+    margin: 10% 4% 2% 4%;
+    padding: 2% 2% 6% 2%;
+    background-color: rgba(234, 242, 253, 1);
+    box-shadow: 10px 0px 10px -10px rgba(0, 0, 0, 0.1),
+                -10px 0px 10px -10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.formcontato__contacto {
+    display: flex;
+    width: 88%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.formcontato--esquerda {
+    flex: 1;
+}
+
+.formcontato__img {
+    width: 88%;
+    max-width: 400px; /* Ajusta según el tamaño deseado */
+    margin-inline-start: 34%;
+}
+
+.formcontato__text {
+    flex: 2;
+    padding-left: 2%;
+    position: relative; /* Añadimos posición relativa */
+}
+
+.formcontato__title,
+.formcontato__subtext {
+    margin: 0 0 10px 0;
+    margin-inline-start: 30%;
+}
+
+.mb-3 {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-inline-start: 30%;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.form-control {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-success {
+    padding: 8px 15px; /* Reducimos el padding del botón */
+    font-size: 0.9rem; /* Reducimos el tamaño de fuente */
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: absolute; /* Posicionamos absolutamente */
+    left: 32%; /* Alineamos a la izquierda dentro del contenedor relativo */
+    bottom: -8%; /* Alineamos desde la parte inferior */
+}
+
+.btn-success:hover {
+    background-color: #0056b3;
+}
+
+
+/* <----- footer-----> */
+
+.footer {
+    display: flex;
+    width: 88%;
+    margin: 2% 2% 0% 4%; /* Centra el footer horizontalmente y agrega espacio en la parte superior */
+    padding: 2%;
+    background-color: rgba(234, 242, 253, 1);
+    box-shadow: 10px 0px 10px -10px rgba(0, 0, 0, 0.1),
+                -10px 0px 10px -10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente */
+    flex-direction: column; /* Alinea los elementos en columna */
+}
+
+.footer__rodape {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente */
+    flex-direction: column; /* Alinea los elementos en columna */
+}
+
+.redes-sociales {
+    margin-bottom: 10px; /* Espacio entre los iconos y el texto */
+}
+
+.redes-sociales a {
+    margin-right: 10%;
+    margin-inline-start: .7%;
+}
+
+
+.redes-sociales a {
+    margin: 0 5.38%; /* Margen horizontal entre los iconos */
+}
+
+/* Tamaño independiente para cada icono */
+.icon-gmail {
+    width: 1%;
+    height: 1%;
+    margin: 20% 20% 20% 20%;
+}
+
+
+.redes-sociales img {
+    width: 32px; /* Tamaño de los iconos */
+    height: 32px;
+}
+
+.redes-sociales a:hover img {
+    filter: brightness(70%); /* Cambia el brillo al pasar el ratón por encima */
+}
+
+.creditos {
+    margin-top: 10px; /* Espacio entre los iconos y el texto */
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-bottom: 10px; /* Espacio entre los iconos y el texto */
+}
+
+
+/*Tablet*/
+/* Media query para pantallas de 768px y más */
+@media (min-width: 667px) and (max-width: 768px) {
+/* Menú */
+
+
+.tudo {
+    margin-inline-start: 4%;
+}
+
+.body {
+    overflow-y: hidden; /* Oculta la barra de desplazamiento vertical */
+}
+.experience__section__outer__valia{
+    transition: none;
+}
+
+.experience__section__outer__valia.hover-effect {
+
+   margin-inline-start: none;
+   background-color: rgb(143, 255, 205);
+   transition: none;
+ } 
+.experience__box__valia {
+transition: none;
+}
+.experience__box__valia.hover-effect {
+    transition: none;
+    transform-origin: none; 
+    transform: none; 
+}
+.experience__section__outer__valia:hover .experience__img__valia {
+    transform: none;
+}
+
+/* _______________________ */
+
+.experience__section__outer__heyBanco {
+    transition: none;
+}
+.experience__section__outer__heyBanco.hover-effect  {
+    margin-top: none;
+    background-color:rgba(40, 50, 70, 0.9);
+    margin-inline-start: none;  
+}
+
+.experience__section__outer__heyBanco:hover .experience__img__heyBanco {
+    transform: none;
+}
+
+.experience__section__heyBanco {
+    transition: none;
+}
+
+.experience__section__heyBanco.hover-effect {
+    transform: none;
+}
+
+.experience__section__heyBanco:hover {
+    box-shadow: none;
+}
+
+.experience__img__heyBanco {
+    transition: none; 
+}
+
+/* ________________________________ */
+
+.experience__section__outer__ns{
+    transition: none;
+}
+
+
+.experience__section__outer__ns.hover-effect {
+    margin-inline-start: none; 
+    background-color: rgb(209, 113, 222);
+    transition: none;
+}
+
+.experience__box__ns{
+    transition: none;
+}
+
+.experience__box__ns.hover-effect{
+    transition: none;
+    transform-origin: none;
+    transform: none;
+}
+
+
+.experience__box__ns:hover {
+    box-shadow:none;
+}
+
+.experience__img__ns {
+    transition: none;
+}
+
+.experience__section__outer__ns:hover .experience__img__ns {
+    transform: none;
+}
+/* _________________________________ */
+
+.experience__section__outer__barberiaAlura {
+    transition: none;
+}
+
+.experience__section__outer__barberiaAlura {
+    transition: none;
+}
+
+.experience__section__outer__barberiaAlura.hover-effect  {
+    margin-top: none;
+    background-color:rgba(255, 165, 0, 1);
+    margin-inline-start: none;
+}  
+
+.experience__section__outer__barberiaAlura:hover .experience__img__barberiaAlura {
+    transform: none;
+}
+
+.experience__section__barberiaAlura {
+    transition: none;
+}
+
+.experience__img__barberiaAlura{
+  transition:none;
+}
+.experience__section__barberiaAlura.hover-effect {
+     transform: none;
+ }
+
+ .experience__section__barberiaAlura:hover {
+    box-shadow: none;
+}
+
+    
+    .menu__list__item:nth-child(1),
+    .menu__list__item:nth-child(2),
+    .menu__list__item:nth-child(3),
+    .menu__list__item:nth-child(4) {
+        display: none; /* Oculta los primeros cuatro elementos del menú */
+    }
+
+    .menu {
+        width: 90%; /* Ajusta el ancho al 92% para centrarlo y darle un margen */
+        margin: 2% 2% 0% 5%; /* Centra horizontalmente el menú */
+        position: relative; /* Fija el menú en la parte superior */
+        
+   }
+
+    .menu__list {
+        margin-left: auto; /* Mueve la lista de elementos a la derecha */
+    }
+
+    .menu__list__item {
+        margin-right: 24px; /* Incrementa el margen entre elementos */
+    }
+
+    .menu__list__item:last-child {
+        margin-right: 0;
+    }
+
+    .title {
+        display: flex;
+        width: 86%;
+        margin: 0% 4% 2% 4%;
+        margin-top: 2%;
+        padding: 2%;
+        padding-bottom: 1%;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 10px 0px 10px -10px rgba(0, 0, 0, 0.1),
+                    -10px 0px 10px -10px rgba(0, 0, 0, 0.1);
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+    
+    .title__div {
+        display: flex;
+        align-items: center;
+        margin-top: 0%;
+    }
+    
+    .title__container {
+        width: 68%;
+        margin-top: -20%;
+        padding: .5% .5% .5% .5%;
+        margin: 1% 1% 1% 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: flex-start;
+    }
+    
+    .title__bio {
+        margin-right: 20px;
+        margin-bottom: 0%;
+        font-size: 128%;
+        margin-inline-start: 4%;
+        margin-inline-end: 3%;
+        shape-outside: circle(100%);
+    }
+    
+    .subtitle {
+        width: 80%;
+        font-size: 128%;
+        text-align: justify;
+        display: flex;
+        margin-block-start: 0%;
+        margin-block-end: 0%;
+        margin-inline-start: 4%;
+        margin-inline-end: 3%;
+    }
+    
+    .title__subsection {
+        font-size: 118%;
+        color: rgba(137, 137, 137, 1);
+        margin-inline-start: 4%;
+        margin-inline-end: .5%;
+        margin-bottom: 2%;
+        text-align: justify; /* Alinea el texto justificado */
+        margin: 2% 2% 2% 4%; /* Ajusta el margen inferior para separar los párrafos */
+        width: 100%; /* Ajusta el ancho del párrafo para ocupar todo el espacio disponible */
+        max-width: 80%; /* Limita la anchura máxima del párrafo */
+        word-break: break-word; /* Rompe las palabras largas si exceden el ancho del contenedor */
+    }
+    
+    .title__network {
+        font-size: 100%;
+        margin-inline-start: 4%;
+        margin-inline-end: 25%;
+    }
+    
+    
+    /* Sección "Sobre mi" */
+    
+    .about {
+        margin: 4% 4% 4% 4%;
+        /* position: relative; */
+        width: 86%;
+        background-color: rgba(234, 242, 253, 1); /* Mantiene el fondo azul */
+    }
+
+    .about__container {
+        flex-direction: column; /* Cambia la dirección a columna */
+        text-align: center;
+        background-color: rgba(234, 242, 253, 1); /* Fondo azul */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .about__img--right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: auto;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about__img1 {
+        width: 78%;
+        height: auto;
+        position: flex;
+        top: 0;
+        left: 0;
+        z-index: -1; /* Coloca la imagen detrás del texto */
+        opacity: 0.9; /* Ajusta la opacidad para que el texto sea legible */
+    }
+
+    .about__img3 {
+        display: none; /* Oculta la segunda imagen */
+    }
+
+    .about__content {
+        position: relative;
+        z-index: 2; /* Asegura que el contenido esté por encima del fondo */
+    }
+
+      /*.about p {
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+   } */
+
+    .about__title{
+        width: 40%;
+        padding: 2% 2% 2% 2%;
+        display: flex; 
+        margin-inline-start: 40%;
+        margin-inline-end: 4%;
+    }
+    
+    .about p {
+        font-size: 112%;
+        color: rgb(102, 102, 102);
+        margin-inline-start: 8%;
+        margin-inline-end: 8%;
+        margin-bottom: 2%;
+        text-align: justify; /* Alinea el texto justificado */
+        margin: 2% 8% 2% 8%; /* Ajusta el margen inferior para separar los párrafos */
+        width: 100%; /* Ajusta el ancho del párrafo para ocupar todo el espacio disponible */
+        max-width: 80%; /* Limita la anchura máxima del párrafo */
+        word-break: break-word; /* Rompe las palabras largas si exceden el ancho del contenedor */
+    }
+
+
+    /*Skills*/
+    .skills__line {
+        width: 88%;
+        margin:4% 4% 4% 4%;
+        display: flex; /* Asegura que los recuadros se muestren en una línea flex */
+        flex-wrap: wrap; /* Permite que los recuadros se envuelvan en múltiples líneas */
+        justify-content: space-between; /* Distribuye los recuadros equitativamente */
+    }
+
+    .skills__box {
+        width: calc(33.33% - 20px); /* Ancho para tres recuadros por fila, con espacio entre ellos */
+        margin-bottom: 20px; /* Espacio inferior entre los recuadros */
+        text-align: center; /* Centra el contenido dentro de cada recuadro */
+        box-sizing: border-box; /* Incluye el padding y border en el ancho y alto */
+    }
+
+    .skills__box img {
+        max-width: 100%; /* Ajusta el tamaño máximo de la imagen al ancho del recuadro */
+        height: auto; /* Mantiene la proporción de la imagen */
+        border-radius: 5px; /* Borde redondeado para las imágenes */
+    }
+
+    .skills__title {
+        margin-inline: 46%;
+    }
+    .skills__name {
+        margin-top: 10px; /* Espacio entre la imagen y el nombre */
+        font-weight: bold; /* Texto en negrita para el nombre de la habilidad */
+    }
+
+/*Hobbies*/
+
+.hobbies__line {
+    width: 88%;
+    margin:4% 4% 4% 4%;
+    display: flex; /* Asegura que los recuadros se muestren en una línea flex */
+    flex-wrap: wrap; /* Permite que los recuadros se envuelvan en múltiples líneas */
+    justify-content: space-between; /* Distribuye los recuadros equitativamente */
+}
+
+.hobbies__box {
+    width: calc(33.33% - 20px); /* Ancho para tres recuadros por fila, con espacio entre ellos */
+    margin-bottom: 20px; /* Espacio inferior entre los recuadros */
+    text-align: center; /* Centra el contenido dentro de cada recuadro */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho y alto */
+}
+
+.hobbies__box img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen al ancho del recuadro */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 5px; /* Borde redondeado para las imágenes */
+}
+
+.hobbies__title {
+    margin-inline: 46%;
+}
+.hobbies__name {
+    margin-top: 10px; /* Espacio entre la imagen y el nombre */
+    font-weight: bold; /* Texto en negrita para el nombre de la habilidad */
+}
+
+/*Formación Académica*/
+
+.academic {
+    display: flex;
+    flex-direction: column;
+    width: 86%;
+    margin: 0% 4% 2% 4.5%;
+    margin-top: 1%;
+    padding: 2%;
+    background-color: rgba(234, 242, 253, 1);
+    border-top: none;
+    border-bottom: none;
+    box-shadow: 10px 0px 10px -10px rgba(0, 0, 0, 0.1),
+                -10px 0px 10px -10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.academic__courses {
+    display: flex;
+    width: 86%;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Envuelve los elementos si no caben en una línea */
+}
+
+.academic__courses__box {
+    width: 30%; /* Ancho inicial */
+    margin-bottom: 20px; /* Espacio entre cada elemento */
+    /* Agrega otras propiedades según sea necesario */
+}
+
+.academic__courses__box img {
+    width: 80%;
+    margin-bottom: 10px; /* Espacio entre la imagen y la descripción */
+}
+
+.academic__courses__item {
+    display: flex;
+    flex-direction: column; /* Cambia a diseño de columna */
+    align-items: center;
+    text-align: center; /* Centra el texto */
+}
+
+.academic__courses__item__description {
+    text-align: center;
+}
+
+/* Experiencia Valia*/
+
+.experience__Valia {
+    width: 86%; /* Ajusta el ancho del contenedor principal */
+    margin: 0% 4% 2% 6%;
+    padding: 2%;
+}
+
+
+.experience__section__title {
+    margin: 6% 0% 3% 3%;
+    white-space: nowrap; /* Titulo Skills */
+    font-size: 120%;
+    margin-inline-start: 34%;
+    border-radius: 4%;
+}
+
+.experience h2 {
+    margin: 2% 0% .5% 3%;
+    white-space: nowrap; /* Titulo Skills */
+    font-size: 120%;
+    margin-inline-start: 0%;
+    border-radius: 4%;
+}
+
+.experience__title {
+    margin: 3% 0% 3% 3%;
+    white-space: nowrap; /* Titulo Skills */
+    font-size: 120%;
+    margin-inline-start: 0%;
+    border-radius: 4%;
+
+}
+
+.experience__text h3 {
+    margin: -1% 2% 4% 2%;
+    margin-inline-start: 18%;
+}
+
+.experience__text  {
+    margin: 2% 4% 0% 4%
+}
+
+.experience__section__outer__valia {
+    flex-direction: column; /* Cambia la dirección a columna para apilar los elementos verticalmente */
+    width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+    margin: 2% 0% 0% 0%; /* Mueve el contenedor a la derecha */
+    padding: 2% 6% 0% 0%;
+}
+.experience__box__valia {
+    flex-direction: column; /* Cambia la dirección a columna para apilar los elementos verticalmente */
+    width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+    margin: 2% 0% 0% 0%;
+    padding: 2% 0% 0% 2.5%;
+}
+
+.experience__img__valia,
+.experience__img {
+    width: 80%; /* Ajusta el ancho de las imágenes */
+    height: auto;
+    margin: 1% 1% 1% 1%; /* Centra las imágenes horizontalmente */
+}
+
+
+
+.experience__info-container {
+    width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+.experience__description,
+.experience__extra-button,
+.experience__botao--extra__valia{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px; /* Espacio debajo de los botones */
+}
+
+.experience__list{
+    column-gap: 50px;
+    margin-bottom: 3.4%;
+}
+
+.experience__description {
+    margin-top: 0%;
+}
+
+.experience__description span,
+.experience__extra-button span {
+    margin: 0 10px; /* Aumentar espacio entre los botones */
+}
+
+.experience__list li {
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+
+/* Experiencia heyBanco */
+
+.experience__container__heyBanco {
+    margin-inline-start: 4%;
+    
+ } 
+
+.experience__section__outer__heyBanco {
+    flex-direction: column;
+    width: 86%;
+    margin: 2% 0% 0% 0%; /* Mueve el contenedor a la derecha */
+    padding: 2% 0% 0% 4%;
+}
+
+.experience__section__heyBanco {
+    flex-direction: column;
+    width: 104.5%;
+    margin: 2% 0% 0% 0%;
+    padding: 2% 0% 0% 2%;
+}
+
+.experience__section__inner__heyBanco {
+    width: 100%;
+}
+
+.experience__img__heyBanco {
+    width: 60%;
+    height: auto;
+    margin: 1% 1% 1% 1%; 
+}
+
+.experience__info-container__heyBanco {
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+}
+
+.experience__description {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.experience__list {
+    text-align: left;
+    padding-left: 20px;
+    column-gap: 10px; /* Ajuste específico para móviles si es necesario */
+}
+
+.experience__extra-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+/* Experiencia Numero secreto*/
+
+
+.experience__ns {
+    display: flex;
+    flex-direction: column;
+    width: 106%;
+    margin: 0% 0% 2% -2.8%;
+    padding: 2%;
+    border-top: none;
+    border-bottom: none;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.experience__section__outer__ns {
+    flex-direction: column;
+    width: 78%;
+    margin: 2% 0% 0% 0%;
+    padding: 2% 6.8% 0% 0%;
+}
+
+.experience__box__ns {
+    flex-direction: column;
+    width: 105%;
+    margin: 2% 0% 0% 0%;
+    padding: 6% 0% 4% 2.5%;
+}
+
+.experience__img__ns {
+    width: 60%;
+    height: auto;
+    margin: 1%;
+}
+
+.experience__info-container__ns {
+    width: 100%;
+    text-align: left;
+}
+
+.experience__buttons__ns {
+    flex-direction: column;
+    width: 100%;
+}
+
+.experience__list_ns {
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+}
+
+.experience__botao--repo__ns,
+.experience__botao--demo__ns {
+    margin: 10px 10px 5px 10px; /* Espacio horizontal entre los botones */
+    padding: 12px 10px;
+    border-radius: 4%;
+    padding: 10px;
+    width: auto;
+}
+
+.experience__botao--extra__ns {
+    margin: 0px 10px 20xp 10px; /* Espacio horizontal entre los botones */
+    padding: 12px 10px;
+    border-radius: 4%;
+    padding: 10px;
+    width: auto;
+}
+
+
+
+/* ---------- */
+.experience {
+    width: 82%; /* Ajusta el ancho del contenedor principal */
+    margin: 0% 4% 2% 6%;
+    padding: 2%;
+}
+
+
+.experience__section__title {
+    margin: 6% 0% 3% 3%;
+    white-space: nowrap; /* Titulo Skills */
+    font-size: 120%;
+    margin-inline-start: 34%;
+    border-radius: 4%;
+}
+
+.experience__ns h2 {
+    margin: 4% 0% 2% 0%;
+    font-size: 120%;
+    margin-inline-start: 0%;
+}
+
+.experience__title {
+    margin: 3% 0% 3% 3%;
+    white-space: nowrap; /* Titulo Skills */
+    font-size: 120%;
+    margin-inline-start: 0%;
+    border-radius: 4%;
+
+}
+
+.experience__text__ns h3 {
+   
+    margin: 1% 0% 4% 18%;
+}
+
+.experience__text  {
+    margin: 2% 4% 0% 4%
+}
+
+.experience__text__ns {
+    margin-bottom: 0%;
+}
+
+/* Experiencia Barberia Alura */
+
+.experience__container__barberiaAlura {
+    margin-inline-start: 4%;
+    
+ } 
+
+.experience__section__outer__barberiaAlura {
+    flex-direction: column;
+    width: 86%;
+    margin: 2% 0% 0% 0%; /* Mueve el contenedor a la derecha */
+    padding: 2% 0% 0% 4%;
+}
+
+.experience__section__barberiaAlura {
+    flex-direction: column;
+    width: 104.5%;
+    margin: 2% 0% 0% 0%;
+    padding: 2% 0% 4% 2%;
+}
+
+.experience__section__inner__barberiaAlura {
+    width: 100%;
+}
+
+.experience__img__barberiaAlura {
+    width: 60%;
+    height: auto;
+    margin: 1% 1% 1% 1%; 
+}
+
+.experience__info-container__barberiaAlura {
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+}
+
+.experience__description {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.experience__list {
+    text-align: left;
+    padding-left: 20px;
+    column-gap: 10px; /* Ajuste específico para móviles si es necesario */
+}
+
+.experience__extra-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+}
+/* .experience__title__ns {
+    margin: 4% 16% 4% 4%
+} */
+
+/*Experiencia Profesional*/
+
+@media (min-width: 425px) and (max-width: 667px) {
+    .tudo {
+        margin-inline-start: 0%;
+        margin-inline-end: 0%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .body {
+        overflow-x: hidden; /* Oculta la barra de desplazamiento vertical */
+    }
+    
+    .experience__section__outer__valia{
+        transition: none;
+    }
+    
+    .experience__section__outer__valia.hover-effect {
+    
+       margin-inline-start: none;
+       background-color: rgb(143, 255, 205);
+       transition: none;
+     } 
+    .experience__box__valia {
+    transition: none;
+    }
+    .experience__box__valia.hover-effect {
+        transition: none;
+        transform-origin: none; 
+        transform: none; 
+    }
+    .experience__section__outer__valia:hover .experience__img__valia {
+        transform: none;
+    }
+    
+    /* _______________________ */
+    
+    .experience__container__heyBanco{
+        margin-inline-start: none;
+        }
+    .experience__section__outer__heyBanco {
+        transition: none;
+    }
+    .experience__section__outer__heyBanco.hover-effect  {
+        margin-top: none;
+        background-color:rgba(40, 50, 70, 0.9);
+        margin-inline-start: none;  
+    }
+    
+    .experience__section__outer__heyBanco:hover .experience__img__heyBanco {
+        transform: none;
+    }
+    
+    .experience__section__heyBanco {
+        transition: none;
+    }
+    
+    .experience__section__heyBanco.hover-effect {
+        transform: none;
+    }
+    
+    .experience__section__heyBanco:hover {
+        box-shadow: none;
+    }
+    
+    .experience__img__heyBanco {
+        transition: none; 
+    }
+    
+    /* ________________________________ */
+    
+    .experience__section__outer__ns{
+        transition: none;
+    }
+    
+    
+    .experience__section__outer__ns.hover-effect {
+        margin-inline-start: none; 
+        background-color: rgb(209, 113, 222);
+        transition: none;
+    }
+    
+    .experience__box__ns{
+        transition: none;
+    }
+    
+    .experience__box__ns.hover-effect{
+        transition: none;
+        transform-origin: none;
+        transform: none;
+    }
+    
+    
+    .experience__box__ns:hover {
+        box-shadow:none;
+    }
+    
+    .experience__img__ns {
+        transition: none;
+    }
+    
+    .experience__section__outer__ns:hover .experience__img__ns {
+        transform: none;
+    }
+    /* _________________________________ */
+    
+    .experience__section__outer__barberiaAlura {
+        transition: none;
+    }
+    
+    .experience__section__outer__barberiaAlura {
+        transition: none;
+    }
+    
+    .experience__section__outer__barberiaAlura.hover-effect  {
+        margin-top: none;
+        background-color:rgba(255, 165, 0, 1);
+        margin-inline-start: none;
+    }  
+    
+    .experience__section__outer__barberiaAlura:hover .experience__img__barberiaAlura {
+        transform: none;
+    }
+    
+    .experience__section__barberiaAlura {
+        transition: none;
+    }
+    
+    .experience__img__barberiaAlura{
+      transition:none;
+    }
+    .experience__section__barberiaAlura.hover-effect {
+         transform: none;
+     }
+    
+     .experience__section__barberiaAlura:hover {
+        box-shadow: none;
+    }
+        
+    .menu__list__item:nth-child(1),
+    .menu__list__item:nth-child(2),
+    .menu__list__item:nth-child(3),
+    .menu__list__item:nth-child(4),
+    .menu__list__item:nth-child(5){
+        display: none; /* Oculta los primeros cuatro elementos del menú */
+    }
+    
+    .menu {
+        width: 100%; /* Ajusta el ancho al 92% para centrarlo y darle un margen */
+        padding:0% 0% 0% 0%;
+        margin: 0% 0% 0% 0%; /* Centra horizontalmente el menú */
+        position: relative; /* Fija el menú en la parte superior */
+        
+    }
+     
+    
+    .menu__title {
+        font-size: 92%;
+        margin-left: 5px;
+    }
+    
+    .menu__list {
+        margin-left: auto; /* Mueve la lista de elementos a la derecha */
+    }
+
+    .menu__list__item a {
+        font-size: 92%;
+        margin-left: 12%;
+        text-decoration: none;
+        color: black;
+        transition: color 0.3s;
+    }
+    
+    .menu__list__item {
+        margin-right: 28px; /* Incrementa el margen entre elementos */
+    }
+    
+    .menu__list__item:last-child {
+        margin-right: 0;
+    }
+    
+      /* Sección "Titulo" */
+    
+    
+    
+    
+    .title {
+        display: flex;
+        width: 100%;
+        margin: 0% 0% 0% 0%;
+        margin-top: 0%;
+        padding: 0% 0% 0% 0%;
+        padding-bottom: 0%;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 10px 0px 10px -10px rgba(0, 0, 0, 0.1),
+                    -10px 0px 10px -10px rgba(0, 0, 0, 0.1);
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+    
+    .title__div {
+        display: flex;
+        align-items: center;
+        margin-top: 0%;
+    }
+    
+    .title__container {
+        width: 64%;
+        margin-top: -20%;
+        padding: .5% .5% .5% .5%;
+        margin: 1% 1% 1% 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: flex-start;
+    }
+    
+    .title__bio {
+        margin-right: 4%;
+        margin-bottom: 0%;
+        margin:8% 0% 0% 0% ;
+        font-size: 112%;
+        margin-inline-start: 8%;
+        margin-inline-end: 0%;
+        shape-outside: circle(100%);
+    }
+    
+    .subtitle {
+        width: 80%;
+        font-size: 112%;
+        text-align: justify;
+        display: flex;
+        margin-block-start: 0%;
+        margin-block-end: 2%;
+        margin-inline-start: 8%;
+        margin-inline-end: 3%;
+    }
+    
+    .title__subsection {
+        font-size: 104%;
+        color: rgba(137, 137, 137, 1);
+        margin-top: 8%;
+        margin-inline-start: 8%;
+        margin-inline-end: .5%;
+        margin-bottom: 2%;
+        text-align: justify; /* Alinea el texto justificado */
+        margin: 2% 8% 2% 8%; /* Ajusta el margen inferior para separar los párrafos */
+        width: 100%; /* Ajusta el ancho del párrafo para ocupar todo el espacio disponible */
+        max-width: 80%; /* Limita la anchura máxima del párrafo */
+        word-break: break-word; /* Rompe las palabras largas si exceden el ancho del contenedor */
+    }
+    
+    .title__network {
+        font-size: 68%;
+        margin-top: 8%;
+        margin-bottom: 8%;
+        margin-inline-start: -4%;
+        margin-inline-end: 0%;
+    }
+    
+        
+        
+        /* Sección "Sobre mi" */
+        
+    .about {
+        margin: 0% 0% 0% 0%;
+        /* position: relative; */
+        width: 96%;
+        background-color: rgba(234, 242, 253, 1); /* Mantiene el fondo azul */
+    }
+    
+    .about__container {
+        flex-direction: column; /* Cambia la dirección a columna */
+        text-align: center;
+        background-color: rgba(234, 242, 253, 1); /* Fondo azul */
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .about__img--right {
+        position: absolute;
+        top: 8%;
+        left: 2%;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about__img1 {
+        width: 78%;
+        height: auto;
+        position: flex;
+        top: 0;
+        left: 0;
+        z-index: -1; /* Coloca la imagen detrás del texto */
+        opacity: 0.9; /* Ajusta la opacidad para que el texto sea legible */
+    }
+    
+    .about__img3 {
+        display: none; /* Oculta la segunda imagen */
+    }
+    
+    .about__content {
+        position: relative;
+        z-index: 2; /* Asegura que el contenido esté por encima del fondo */
+    }
+    
+        /*.about p {
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+    } */
+    
+    .about__title{
+        width: 40%;
+        padding: 2% 2% 2% 2%;
+        display: flex; 
+        margin-inline-start: 40%;
+        margin-inline-end: 4%;
+    }
+    
+    .about p {
+        font-size: 108%;
+        color: rgb(102, 102, 102);
+        margin-inline-start: 16%;
+        margin-inline-end: 0%;
+        margin-bottom: 2%;
+        text-align: justify; /* Alinea el texto justificado */
+        margin: 2% 4% 2% 12%; /* Ajusta el margen inferior para separar los párrafos */
+        width: 100%; /* Ajusta el ancho del párrafo para ocupar todo el espacio disponible */
+        max-width: 80%; /* Limita la anchura máxima del párrafo */
+        word-break: break-word; /* Rompe las palabras largas si exceden el ancho del contenedor */
+    }
+    
+    
+    /*Skills*/
+    .skills__line {
+        width: 90%;
+        margin:8% 4% 4% 5.5%;
+        display: flex; /* Asegura que los recuadros se muestren en una línea flex */
+        flex-wrap: wrap; /* Permite que los recuadros se envuelvan en múltiples líneas */
+        justify-content: space-between; /* Distribuye los recuadros equitativamente */
+    }
+    
+    .skills__box {
+        width: calc(50% - 4%); /* Ancho para tres recuadros por fila, con espacio entre ellos */
+        margin-bottom: 20px; /* Espacio inferior entre los recuadros */
+        text-align: center; /* Centra el contenido dentro de cada recuadro */
+        box-sizing: border-box; /* Incluye el padding y border en el ancho y alto */
+    }
+    
+    .skills__box img {
+        max-width: 100%; /* Ajusta el tamaño máximo de la imagen al ancho del recuadro */
+        height: auto; /* Mantiene la proporción de la imagen */
+        border-radius: 5px; /* Borde redondeado para las imágenes */
+    }
+    
+    .skills__title {
+        margin-inline: 48%;
+    }
+    .skills__name {
+        margin-top: 10px; /* Espacio entre la imagen y el nombre */
+        font-weight: bold; /* Texto en negrita para el nombre de la habilidad */
+    }
+        
+        /*Hobbies*/
+        
+    .hobbies__line {
+        width: 90%;
+        margin:8% 4% 4% 5.5%;
+        display: flex; /* Asegura que los recuadros se muestren en una línea flex */
+        flex-wrap: wrap; /* Permite que los recuadros se envuelvan en múltiples líneas */
+        justify-content: space-between; /* Distribuye los recuadros equitativamente */
+    }
+    
+    .hobbies__box {
+        width: calc(50% - 20px); /* Ancho para tres recuadros por fila, con espacio entre ellos */
+        margin-bottom: 20px; /* Espacio inferior entre los recuadros */
+        text-align: center; /* Centra el contenido dentro de cada recuadro */
+        box-sizing: border-box; /* Incluye el padding y border en el ancho y alto */
+    }
+    
+    .hobbies__box img {
+        max-width: 100%; /* Ajusta el tamaño máximo de la imagen al ancho del recuadro */
+        height: auto; /* Mantiene la proporción de la imagen */
+        border-radius: 5px; /* Borde redondeado para las imágenes */
+    }
+    
+    .hobbies__title {
+        margin-inline: 44%;
+    }
+    .hobbies__name {
+        margin-top: 10px; /* Espacio entre la imagen y el nombre */
+        font-weight: bold; /* Texto en negrita para el nombre de la habilidad */
+    }
+    
+    /*Formación Académica*/
+    
+    .academic {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: 0% 0% 0% 0%;
+        margin-top: 4%;
+        padding: 4% 4% 4% 0%;
+        background-color: rgba(234, 242, 253, 1);
+        border-top: none;
+        border-bottom: none;
+        box-shadow: 10px 0px 10px -10px rgba(0, 0, 0, 0.1), -10px 0px 10px -10px rgba(0, 0, 0, 0.1);
+        align-items: center;
+    }
+    
+    
+    .academic__courses {
+        flex-direction: column; /* Alinear los elementos verticalmente */
+        align-items: center; /* Centrar los elementos hijos */
+    }
+    
+    .academic__courses__box {
+        width: 100%; /* Ajustar el ancho para que ocupe todo el contenedor */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0% 0% 0% 0%;
+        margin-bottom: 20px; /* Espacio entre cada elemento */
+    
+    }
+    
+    .academic__courses__item {
+        width: 100%; /* Asegurarse de que ocupe todo el ancho disponible */
+        display: flex;
+        flex-direction: column; /* Cambiar a diseño de columna */
+        align-items: center;
+        text-align: center; /* Centrar el texto */
+    }
+    
+    .academic__courses__item__img-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px; /* Espacio entre la imagen y la descripción */
+    }
+    
+    .academic__courses__box img {
+        width: 40%; /* Ajustar el tamaño de la imagen */
+        margin-bottom: 10px; /* Espacio entre la imagen y la descripción */
+    }
+    
+    .academic__courses__item__description {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .academic__courses__item__description h4, 
+    .academic__courses__item__description p {
+        margin: 5px 0; /* Espaciado entre los elementos de texto */
+        font-size: 14px; /* Ajustar el tamaño de la fuente */
+    }
+    
+    
+    /* Experiencia Valia*/
+    
+    .experience__Valia {
+        width: 88%; /* Ajusta el ancho del contenedor principal */
+        margin: 0% 4% 2% 6%;
+        padding: 2%;
+    }
+    
+    
+    .experience__section__title {
+        margin: 6% 0% 3% 3%;
+        white-space: nowrap; /* Titulo Skills */
+        font-size: 100%;
+        margin-inline-start: 34%;
+        border-radius: 4%;
+    }
+    
+    .experience h2 {
+        margin: 2% 0% .5% 3%;
+        white-space: nowrap; /* Titulo Skills */
+        font-size: 100%;
+        margin-inline-start: 0%;
+        border-radius: 4%;
+    }
+    
+    .experience__title {
+        margin: 3% 0% 3% 3%;
+        white-space: nowrap; /* Titulo Skills */
+        font-size: 120%;
+        margin-inline-start: 0%;
+        border-radius: 4%;
+    
+    }
+    
+    .experience__text h3 {
+        margin: -1% 2% 4% 2%;
+        margin-inline-start: 18%;
+    }
+    
+    .experience__text  {
+        margin: 2% 4% 0% 4%
+    }
+    
+    .experience__section__outer__valia {
+        flex-direction: column; /* Cambia la dirección a columna para apilar los elementos verticalmente */
+        width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+        margin: 2% 0% 0% 0%; /* Mueve el contenedor a la derecha */
+        padding: 2% 6% 0% 0%;
+    }
+    .experience__box__valia {
+        flex-direction: column; /* Cambia la dirección a columna para apilar los elementos verticalmente */
+        width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+        margin: 2% 0% 0% 0%;
+        padding: 2% 0% 0% 2.5%;
+    }
+    
+    .experience__img__valia,
+    .experience__img {
+        width: 80%; /* Ajusta el ancho de las imágenes */
+        height: auto;
+        margin: 1% 1% 1% 1%; /* Centra las imágenes horizontalmente */
+    }
+    
+    
+    
+    .experience__info-container {
+        width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+    .experience__description,
+    .experience__extra-button,
+    .experience__botao--extra__valia{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px; /* Espacio debajo de los botones */
+    }
+    
+    .experience__list{
+        column-gap: 50px;
+        margin-bottom: 3.4%;
+    }
+    
+    .experience__description {
+        margin-top: 0%;
+    }
+    
+    .experience__description span,
+    .experience__extra-button span {
+        margin: 0 10px; /* Aumentar espacio entre los botones */
+    }
+    
+    .experience__list li {
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+    
+    
+    /* Experiencia heyBanco */
+    
+    .experience__container__heyBanco {
+        margin-inline-start: 4%;
+        
+        } 
+    
+    .experience__section__outer__heyBanco {
+        flex-direction: column;
+        width: 88%;
+        margin: 2% 0% 0% 0%; /* Mueve el contenedor a la derecha */
+        padding: 2% 0% 0% 4%;
+    }
+    
+    .experience__section__heyBanco {
+        flex-direction: column;
+        width: 104.5%;
+        margin: 2% 0% 0% 0%;
+        padding: 2% 0% 0% 2%;
+    }
+    
+    .experience__section__inner__heyBanco {
+        width: 100%;
+    }
+    
+    .experience__img__heyBanco {
+        width: 60%;
+        height: auto;
+        margin: 1% 1% 1% 1%; 
+    }
+    
+    .experience__info-container__heyBanco {
+        width: 100%;
+        text-align: left;
+        margin-left: 0;
+    }
+    
+    .experience__description {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .experience__list {
+        text-align: left;
+        padding-left: 20px;
+        column-gap: 10px; /* Ajuste específico para móviles si es necesario */
+    }
+    
+    .experience__extra-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 2%;
+    }
+        
+        /* Experiencia Numero secreto*/
+        
+        
+    .experience__ns {
+        display: flex;
+        margin-inline-start: 4%;
+        flex-direction: column;
+        width: 100%;
+        margin: 0% 0% 4% 4%;
+        padding:0% 0% 0% 0%;
+        border-top: none;
+        border-bottom: none;
+        align-items: center;
+        border-radius: 10px;
+    }
+    
+    .experience__section__outer__ns {
+        flex-direction: column;
+        width: 88%;
+        margin: 2% 0% 0% 0%;
+        padding: 1% 6% 0% 0%;
+    }
+    
+    .experience__box__ns {
+        flex-direction: column;
+        width: 105%;
+        margin: 2% 0% 0% 0%;
+        padding: 6% 0% 4% 2.5%;
+    }
+    
+    .experience__img__ns {
+        width: 60%;
+        height: auto;
+        margin: 1%;
+    }
+    
+    .experience__info-container__ns {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .experience__buttons__ns {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .experience__list_ns {
+        grid-template-columns: 1fr;
+        padding-left: 20px;
+    }
+    
+    .experience__botao--repo__ns,
+    .experience__botao--demo__ns {
+        margin: 10px 10px 5px 10px; /* Espacio horizontal entre los botones */
+        padding: 12px 10px;
+        border-radius: 4%;
+        padding: 10px;
+        width: auto;
+    }
+    
+    .experience__botao--extra__ns {
+        margin: 0px 10px 20xp 10px; /* Espacio horizontal entre los botones */
+        padding: 12px 10px;
+        border-radius: 4%;
+        padding: 10px;
+        width: auto;
+    }
+    
+    /* ---------- */
+    .experience {
+        width: 82%; /* Ajusta el ancho del contenedor principal */
+        margin: 0% 4% 2% 6%;
+        padding: 2%;
+    }
+    
+    
+    .experience__section__title {
+        margin: 6% 0% 3% 3%;
+        white-space: nowrap; /* Titulo Skills */
+        font-size: 120%;
+        margin-inline-start: 34%;
+        border-radius: 4%;
+    }
+    
+    .experience__ns h2 {
+        margin: 4% 0% 2% 0%;
+        font-size: 120%;
+        margin-inline-start: 0%;
+    }
+    
+    .experience__title {
+        margin: 3% 0% 3% 3%;
+        white-space: nowrap; /* Titulo Skills */
+        font-size: 120%;
+        margin-inline-start: 0%;
+        border-radius: 4%;
+    
+    }
+    
+    .experience__text__ns h3 {
+        
+        margin: 1% 0% 4% 18%;
+    }
+    
+    .experience__text  {
+        margin: 2% 4% 0% 4%
+    }
+    
+    .experience__text__ns {
+        margin-bottom: 0%;
+    }
+    
+    /* Experiencia Barberia Alura */
+    
+    .experience__container__barberiaAlura {
+        margin-inline-start: 4%;
+        
+        } 
+    
+    .experience__section__outer__barberiaAlura {
+        flex-direction: column;
+        width: 88%;
+        margin: 2% 0% 0% 0%; /* Mueve el contenedor a la derecha */
+        padding: 2% 0% 0% 4%;
+    }
+    
+    .experience__section__barberiaAlura {
+        flex-direction: column;
+        width: 104.5%;
+        margin: 2% 0% 0% 0%;
+        padding: 2% 0% 4% 2%;
+    }
+    
+    .experience__section__inner__barberiaAlura {
+        width: 100%;
+    }
+    
+    .experience__img__barberiaAlura {
+        width: 60%;
+        height: auto;
+        margin: 1% 1% 1% 1%; 
+    }
+    
+    .experience__info-container__barberiaAlura {
+        width: 100%;
+        text-align: left;
+        margin-left: 0;
+    }
+    
+    .experience__description {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .experience__list {
+        text-align: left;
+        padding-left: 20px;
+        column-gap: 10px; /* Ajuste específico para móviles si es necesario */
+    }
+    
+    .experience__extra-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 2%;
+    }
+    
+    /* Contacto*/
+    
+    .formcontato {
+        flex-direction: column; /* Cambia a disposición en columna */
+        align-items: center;
+        display: flex;
+        width: 100%;
+        margin: 16% 0% 16% 0%;
+        padding: 12% 4% 16% 2%;
+        background-color: rgba(234, 242, 253, 1);
+        box-shadow: 10px 0px 10px -10px rgba(0, 0, 0, 0.1), -10px 0px 10px -10px rgba(0, 0, 0, 0.1);
+        align-items: center;
+        justify-content: space-between;
+    
+    }
+
+    .mb-3 {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-inline-start: 4%;
+    }
+    
+    .formcontato__contacto {
+        flex-direction: column; /* Cambia a disposición en columna */
+        align-items: center;
+    }
+    
+    .formcontato--esquerda {
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px; /* Añade espacio entre la imagen y el formulario */
+    }
+    
+    .formcontato__img {
+        width: 80%; /* Ajusta el tamaño de la imagen */
+        max-width: 200px; /* Ajusta según el tamaño deseado */
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+    
+    .formcontato__text {
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        padding-left: 0;
+        text-align: center; /* Centra el texto */
+        position: relative; /* Añade posición relativa para el posicionamiento absoluto del botón */
+    }
+    
+    .formcontato__title,
+    .formcontato__subtext {
+        margin: 4% 0% 4% 6%; /* Ajusta los márgenes */
+        text-align: justify;
+    }
+    
+    .formcontato__form {
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    }
+    
+    .formcontato__input,
+    .formcontato__textarea {
+        width: calc(100% - 40px); /* Asegura que las entradas ocupen todo el ancho menos el padding */
+        margin: 10px 20px; /* Ajusta los márgenes */
+        padding: 10px;
+    }
+    
+    .formcontato__botao {
+        width: max-content; /* Asegura que el botón ocupe todo el ancho menos el padding */
+        margin: 2% 0% 0% 0%; /* Ajusta los márgenes */
+        padding: 10px;
+        position: relative; /* Mantiene la posición absoluta */
+        left: 20px; /* Ajusta el alineamiento a la izquierda */
+        bottom: -20px; /* Ajusta el alineamiento desde la parte inferior */
+        margin-inline-start: 1%;
+    }
+    
+    
+    /* Footer*/
+    
+    
+    .footer {
+        width: 100%;
+        padding: 4% 6% 4% 1%; /* Ajusta el padding */
+        margin-right: 0%;
+        margin-left: 0%;
+        box-shadow: none; /* Elimina el box-shadow */
+        flex-direction: column; /* Alinea los elementos en columna */
+    }
+    
+    .footer__rodape {
+        width: 112%;
+        flex-direction: column; /* Alinea los elementos en columna */
+        align-items: center;
+        text-align: center; /* Centra el texto */
+    }
+    
+    .redes-sociales {
+        margin-bottom: 20px; /* Espacio entre los iconos y el texto */
+    }
+    
+    .redes-sociales a {
+        margin: 0 10px; /* Margen horizontal entre los iconos */
+    }
+    
+    .redes-sociales img {
+        width: 32px; /* Tamaño de los iconos */
+        height: 32px;
+    }
+    
+    .creditos {
+        margin-top: 10px; /* Espacio entre los iconos y el texto */
+        text-align: center; /* Centra el texto horizontalmente */
+        margin-bottom: 10px; /* Espacio entre los iconos y el texto */
+    }
+   
+    }
+
+/*Mobile*/
+@media (max-width: 426px) {
+
+
+.tudo {
+    margin-inline-start: 0%;
+    margin-inline-end: 0%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.body {
+     overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+    
+}
+
+.experience__section__outer__valia{
+    transition: none;
+}
+
+.experience__section__outer__valia.hover-effect {
+
+   margin-inline-start: none;
+   background-color: rgb(143, 255, 205);
+   transition: none;
+ } 
+.experience__box__valia {
+transition: none;
+}
+.experience__box__valia.hover-effect {
+    transition: none;
+    transform-origin: none; 
+    transform: none; 
+}
+.experience__section__outer__valia:hover .experience__img__valia {
+    transform: none;
+}
+
+/* _______________________ */
+
+.experience__section__outer__heyBanco {
+    transition: none;
+}
+.experience__section__outer__heyBanco.hover-effect  {
+    margin-top: none;
+    background-color:rgba(40, 50, 70, 0.9);
+    margin-inline-start: none;  
+}
+
+.experience__section__outer__heyBanco:hover .experience__img__heyBanco {
+    transform: none;
+}
+
+.experience__section__heyBanco {
+    transition: none;
+}
+
+.experience__section__heyBanco.hover-effect {
+    transform: none;
+}
+
+.experience__section__heyBanco:hover {
+    box-shadow: none;
+}
+
+.experience__img__heyBanco {
+    transition: none; 
+}
+
+/* ________________________________ */
+
+.experience__section__outer__ns{
+    transition: none;
+}
+
+
+.experience__section__outer__ns.hover-effect {
+    margin-inline-start: none; 
+    background-color: rgb(209, 113, 222);
+    transition: none;
+}
+
+.experience__box__ns{
+    transition: none;
+}
+
+.experience__box__ns.hover-effect{
+    transition: none;
+    transform-origin: none;
+    transform: none;
+}
+
+
+.experience__box__ns:hover {
+    box-shadow:none;
+}
+
+.experience__img__ns {
+    transition: none;
+}
+
+.experience__section__outer__ns:hover .experience__img__ns {
+    transform: none;
+}
+/* _________________________________ */
+
+.experience__section__outer__barberiaAlura {
+    transition: none;
+}
+
+.experience__section__outer__barberiaAlura {
+    transition: none;
+}
+
+.experience__section__outer__barberiaAlura.hover-effect  {
+    margin-top: none;
+    background-color:rgba(255, 165, 0, 1);
+    margin-inline-start: none;
+}  
+
+.experience__section__outer__barberiaAlura:hover .experience__img__barberiaAlura {
+    transform: none;
+}
+
+.experience__section__barberiaAlura {
+    transition: none;
+}
+
+.experience__img__barberiaAlura{
+  transition:none;
+}
+.experience__section__barberiaAlura.hover-effect {
+     transform: none;
+ }
+
+ .experience__section__barberiaAlura:hover {
+    box-shadow: none;
+}
+
+    
+.menu__list__item:nth-child(1),
+.menu__list__item:nth-child(2),
+.menu__list__item:nth-child(3),
+.menu__list__item:nth-child(4),
+.menu__list__item:nth-child(5){
+    display: none; /* Oculta los primeros cuatro elementos del menú */
+}
+
+.menu {
+    width: 124%; /* Ajusta el ancho al 92% para centrarlo y darle un margen */
+    padding:0% 0% 0% 0%;
+    margin: 0% 0% 0% 0%; /* Centra horizontalmente el menú */
+    position: relative; /* Fija el menú en la parte superior */
+    
+}
+ 
+
+
+.menu__list {
+    margin-left: auto; /* Mueve la lista de elementos a la derecha */
+}
+
+.menu__list__item {
+    margin-right: 24px; /* Incrementa el margen entre elementos */
+}
+
+.menu__list__item:last-child {
+    margin-right: 0;
+}
+
+  /* Sección "Titulo" */
+
+
+
+
+.title {
+    display: flex;
+    width: 124%;
+    margin: 0% 0% 0% 0%;
+    margin-top: 0%;
+    padding: 0% 0% 0% 0%;
+    padding-bottom: 0%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 10px 0px 10px -10px rgba(0, 0, 0, 0.1),
+                -10px 0px 10px -10px rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.title__div {
+    display: flex;
+    align-items: center;
+    margin-top: 0%;
+}
+
+.title__container {
+    width: 68%;
+    margin-top: -20%;
+    padding: .5% .5% .5% .5%;
+    margin: 1% 1% 1% 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: flex-start;
+}
+
+.title__bio {
+    margin-right: 4%;
+    margin-bottom: 0%;
+    margin:8% 0% 0% 0% ;
+    font-size: 112%;
+    margin-inline-start: 8%;
+    margin-inline-end: 0%;
+    shape-outside: circle(100%);
+}
+
+.subtitle {
+    width: 80%;
+    font-size: 112%;
+    text-align: justify;
+    display: flex;
+    margin-block-start: 0%;
+    margin-block-end: 2%;
+    margin-inline-start: 8%;
+    margin-inline-end: 3%;
+}
+
+.title__subsection {
+    font-size: 104%;
+    color: rgba(137, 137, 137, 1);
+    margin-top: 8%;
+    margin-inline-start: 8%;
+    margin-inline-end: .5%;
+    margin-bottom: 2%;
+    text-align: justify; /* Alinea el texto justificado */
+    margin: 2% 8% 2% 8%; /* Ajusta el margen inferior para separar los párrafos */
+    width: 100%; /* Ajusta el ancho del párrafo para ocupar todo el espacio disponible */
+    max-width: 80%; /* Limita la anchura máxima del párrafo */
+    word-break: break-word; /* Rompe las palabras largas si exceden el ancho del contenedor */
+}
+
+.title__network {
+    font-size: 80%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    margin-inline-start: -4%;
+    margin-inline-end: 0%;
+}
+
+    
+    
+    /* Sección "Sobre mi" */
+    
+.about {
+    margin: 0% 0% 0% 0%;
+    /* position: relative; */
+    width: 119%;
+    background-color: rgba(234, 242, 253, 1); /* Mantiene el fondo azul */
+}
+
+.about__container {
+    flex-direction: column; /* Cambia la dirección a columna */
+    text-align: center;
+    background-color: rgba(234, 242, 253, 1); /* Fondo azul */
+    position: relative;
+    overflow: hidden;
+}
+
+.about__img--right {
+    position: absolute;
+    top: 8%;
+    left: 2%;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__img1 {
+    width: 78%;
+    height: auto;
+    position: flex;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Coloca la imagen detrás del texto */
+    opacity: 0.9; /* Ajusta la opacidad para que el texto sea legible */
+}
+
+.about__img3 {
+    display: none; /* Oculta la segunda imagen */
+}
+
+.about__content {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté por encima del fondo */
+}
+
+    /*.about p {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+} */
+
+.about__title{
+    width: 40%;
+    padding: 2% 2% 2% 2%;
+    display: flex; 
+    margin-inline-start: 40%;
+    margin-inline-end: 4%;
+}
+
+.about p {
+    font-size: 108%;
+    color: rgb(102, 102, 102);
+    margin-inline-start: 16%;
+    margin-inline-end: 0%;
+    margin-bottom: 2%;
+    text-align: justify; /* Alinea el texto justificado */
+    margin: 2% 4% 2% 12%; /* Ajusta el margen inferior para separar los párrafos */
+    width: 100%; /* Ajusta el ancho del párrafo para ocupar todo el espacio disponible */
+    max-width: 80%; /* Limita la anchura máxima del párrafo */
+    word-break: break-word; /* Rompe las palabras largas si exceden el ancho del contenedor */
+}
+
+
+/*Skills*/
+.skills__line {
+    width: 109%;
+    margin:8% 4% 4% 5.5%;
+    display: flex; /* Asegura que los recuadros se muestren en una línea flex */
+    flex-wrap: wrap; /* Permite que los recuadros se envuelvan en múltiples líneas */
+    justify-content: space-between; /* Distribuye los recuadros equitativamente */
+}
+
+.skills__box {
+    width: calc(50% - 4%); /* Ancho para tres recuadros por fila, con espacio entre ellos */
+    margin-bottom: 20px; /* Espacio inferior entre los recuadros */
+    text-align: center; /* Centra el contenido dentro de cada recuadro */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho y alto */
+}
+
+.skills__box img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen al ancho del recuadro */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 5px; /* Borde redondeado para las imágenes */
+}
+
+.skills__title {
+    margin-inline: 56%;
+}
+.skills__name {
+    margin-top: 10px; /* Espacio entre la imagen y el nombre */
+    font-weight: bold; /* Texto en negrita para el nombre de la habilidad */
+}
+    
+    /*Hobbies*/
+    
+.hobbies__line {
+    width: 109%;
+    margin:8% 4% 4% 5.5%;
+    display: flex; /* Asegura que los recuadros se muestren en una línea flex */
+    flex-wrap: wrap; /* Permite que los recuadros se envuelvan en múltiples líneas */
+    justify-content: space-between; /* Distribuye los recuadros equitativamente */
+}
+
+.hobbies__box {
+    width: calc(50% - 20px); /* Ancho para tres recuadros por fila, con espacio entre ellos */
+    margin-bottom: 20px; /* Espacio inferior entre los recuadros */
+    text-align: center; /* Centra el contenido dentro de cada recuadro */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho y alto */
+}
+
+.hobbies__box img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen al ancho del recuadro */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 5px; /* Borde redondeado para las imágenes */
+}
+
+.hobbies__title {
+    margin-inline: 52%;
+}
+.hobbies__name {
+    margin-top: 10px; /* Espacio entre la imagen y el nombre */
+    font-weight: bold; /* Texto en negrita para el nombre de la habilidad */
+}
+
+/*Formación Académica*/
+
+.academic {
+    display: flex;
+    flex-direction: column;
+    width: 122%;
+    margin: 0% 0% 0% 0%;
+    margin-top: 4%;
+    padding: 4% 0% 4% 0%;
+    background-color: rgba(234, 242, 253, 1);
+    border-top: none;
+    border-bottom: none;
+    box-shadow: 10px 0px 10px -10px rgba(0, 0, 0, 0.1), -10px 0px 10px -10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+
+.academic__courses {
+    flex-direction: column; /* Alinear los elementos verticalmente */
+    align-items: center; /* Centrar los elementos hijos */
+}
+
+.academic__courses__box {
+    width: 100%; /* Ajustar el ancho para que ocupe todo el contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0% 0% 0% 0%;
+    margin-bottom: 20px; /* Espacio entre cada elemento */
+
+}
+
+.academic__courses__item {
+    width: 100%; /* Asegurarse de que ocupe todo el ancho disponible */
+    display: flex;
+    flex-direction: column; /* Cambiar a diseño de columna */
+    align-items: center;
+    text-align: center; /* Centrar el texto */
+}
+
+.academic__courses__item__img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Espacio entre la imagen y la descripción */
+}
+
+.academic__courses__box img {
+    width: 64%; /* Ajustar el tamaño de la imagen */
+    margin-bottom: 10px; /* Espacio entre la imagen y la descripción */
+}
+
+.academic__courses__item__description {
+    text-align: center;
+    width: 100%;
+}
+
+.academic__courses__item__description h4, 
+.academic__courses__item__description p {
+    margin: 5px 0; /* Espaciado entre los elementos de texto */
+    font-size: 14px; /* Ajustar el tamaño de la fuente */
+}
+
+
+/* Experiencia Valia*/
+
+.experience__Valia {
+    width: 100%; /* Ajusta el ancho del contenedor principal */
+    margin: 0% 4% 2% 6%;
+    padding: 2%;
+}
+
+
+.experience__section__title {
+    margin: 6% 0% 3% 3%;
+    white-space: nowrap; /* Titulo Skills */
+    font-size: 120%;
+    margin-inline-start: 36%;
+    border-radius: 4%;
+}
+
+.experience h2 {
+    margin: 2% 0% .5% 3%;
+    white-space: nowrap; /* Titulo Skills */
+    font-size: 120%;
+    margin-inline-start: 8%;
+    border-radius: 4%;
+}
+
+.experience__title {
+    margin: 3% 0% 3% 3%;
+    white-space: nowrap; /* Titulo Skills */
+    font-size: 120%;
+    margin-inline-start: 0%;
+    border-radius: 4%;
+
+}
+
+.experience__text h3 {
+    margin: -1% 2% 4% 2%;
+    margin-inline-start: 18%;
+}
+
+.experience__text  {
+    margin: 2% 4% 0% 4%
+}
+
+.experience__section__outer__valia {
+    flex-direction: column; /* Cambia la dirección a columna para apilar los elementos verticalmente */
+    width: 98%; /* Ajusta el ancho para pantallas pequeñas */
+    margin: 2% 0% 0% 10%; /* Mueve el contenedor a la derecha */
+    padding: 2% 6% 0% 0%;
+}
+.experience__box__valia {
+    flex-direction: column; /* Cambia la dirección a columna para apilar los elementos verticalmente */
+    width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+    margin: 2% 0% 0% 0%;
+    padding: 2% 0% 0% 2.5%;
+}
+
+.experience__img__valia,
+.experience__img {
+    width: 80%; /* Ajusta el ancho de las imágenes */
+    height: auto;
+    margin: 1% 1% 1% 1%; /* Centra las imágenes horizontalmente */
+}
+
+
+
+.experience__info-container {
+    width: 100%; /* Ajusta el ancho para pantallas pequeñas */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+.experience__description,
+.experience__extra-button,
+.experience__botao--extra__valia{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px; /* Espacio debajo de los botones */
+}
+
+.experience__list{
+    column-gap: 50px;
+    margin-bottom: 3.4%;
+}
+
+.experience__description {
+    margin-top: 0%;
+}
+
+.experience__description span,
+.experience__extra-button span {
+    margin: 0 10px; /* Aumentar espacio entre los botones */
+}
+
+.experience__list li {
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+
+/* Experiencia heyBanco */
+
+.experience__container__heyBanco {
+    margin-inline-start: 4%;
+    
+    } 
+
+.experience__section__outer__heyBanco {
+    flex-direction: column;
+    width: 100%;
+    margin: 6% 0% 6% 4%; /* Mueve el contenedor a la derecha */
+    padding: 2% 0% 0% 4%;
+}
+
+.experience__section__heyBanco {
+    flex-direction: column;
+    width: 104.5%;
+    margin: 2% 0% 0% 0%;
+    padding: 2% 0% 0% 2%;
+}
+
+.experience__section__inner__heyBanco {
+    width: 100%;
+}
+
+.experience__img__heyBanco {
+    width: 60%;
+    height: auto;
+    margin: 1% 1% 1% 1%; 
+}
+
+.experience__info-container__heyBanco {
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+}
+
+.experience__description {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.experience__list {
+    text-align: left;
+    padding-left: 20px;
+    column-gap: 10px; /* Ajuste específico para móviles si es necesario */
+}
+
+.experience__extra-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+    
+    /* Experiencia Numero secreto*/
+    
+    
+.experience__ns {
+    display: flex;
+    flex-direction: column;
+    width: 122%;
+    margin: 0% 0% 2% -2.8%;
+    padding: 2%;
+    border-top: none;
+    border-bottom: none;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.experience__section__outer__ns {
+    flex-direction: column;
+    width: 78%;
+    margin: 4% 0% 0% 6%;
+    padding: 2% 6.8% 0% 0%;
+}
+
+.experience__box__ns {
+    flex-direction: column;
+    width: 105%;
+    margin: 2% 0% 0% 0%;
+    padding: 6% 0% 4% 2.5%;
+}
+
+.experience__img__ns {
+    width: 68%;
+    height: auto;
+    margin: 1%;
+}
+
+.experience__info-container__ns {
+    width: 100%;
+    text-align: left;
+}
+
+.experience__buttons__ns {
+    flex-direction: column;
+    width: 100%;
+}
+
+.experience__list_ns {
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+}
+
+.experience__botao--repo__ns,
+.experience__botao--demo__ns {
+    margin: 10px 10px 5px 10px; /* Espacio horizontal entre los botones */
+    padding: 12px 10px;
+    border-radius: 4%;
+    padding: 10px;
+    width: auto;
+}
+
+.experience__botao--extra__ns {
+    margin: 0px 10px 20xp 10px; /* Espacio horizontal entre los botones */
+    padding: 12px 10px;
+    border-radius: 4%;
+    padding: 10px;
+    width: auto;
+}
+
+/* ---------- */
+.experience {
+    width: 82%; /* Ajusta el ancho del contenedor principal */
+    margin: 0% 4% 2% 6%;
+    padding: 2%;
+}
+
+
+.experience__section__title {
+    margin: 6% 0% 3% 3%;
+    white-space: nowrap; /* Titulo Skills */
+    font-size: 120%;
+    margin-inline-start: 34%;
+    border-radius: 4%;
+}
+
+.experience__ns h2 {
+    margin: 4% 0% 2% 0%;
+    font-size: 120%;
+    margin-inline-start: 0%;
+}
+
+.experience__title {
+    margin: 3% 0% 3% 3%;
+    white-space: nowrap; /* Titulo Skills */
+    font-size: 120%;
+    margin-inline-start: 0%;
+    border-radius: 4%;
+
+}
+
+.experience__text__ns h3 {
+    
+    margin: 1% 0% 4% 18%;
+}
+
+.experience__text  {
+    margin: 2% 4% 0% 4%
+}
+
+.experience__text__ns {
+    margin-bottom: 0%;
+}
+
+/* Experiencia Barberia Alura */
+
+.experience__container__barberiaAlura {
+    margin-inline-start: 4%;
+    
+    } 
+
+.experience__section__outer__barberiaAlura {
+    flex-direction: column;
+    width: 100%;
+    margin: 8% 0% 0% 4%; /* Mueve el contenedor a la derecha */
+    padding: 2% 0% 0% 4%;
+}
+
+.experience__section__barberiaAlura {
+    flex-direction: column;
+    width: 104.5%;
+    margin: 2% 0% 0% 0%;
+    padding: 2% 0% 4% 2%;
+}
+
+.experience__section__inner__barberiaAlura {
+    width: 100%;
+}
+
+.experience__img__barberiaAlura {
+    width: 60%;
+    height: auto;
+    margin: 1% 1% 1% 1%; 
+}
+
+.experience__info-container__barberiaAlura {
+    width: 100%;
+    text-align: left;
+    margin-left: 0;
+}
+
+.experience__description {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.experience__list {
+    text-align: left;
+    padding-left: 20px;
+    column-gap: 10px; /* Ajuste específico para móviles si es necesario */
+}
+
+.experience__extra-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+/* Contacto*/
+
+.formcontato {
+    flex-direction: column; /* Cambia a disposición en columna */
+    align-items: center;
+    display: flex;
+    width: 118%;
+    margin: 16% 0% 16% 0%;
+    padding: 12% 2% 16% 2%;
+    background-color: rgba(234, 242, 253, 1);
+    box-shadow: 10px 0px 10px -10px rgba(0, 0, 0, 0.1), -10px 0px 10px -10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.mb-3 {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-inline-start: 4%;
+}
+
+.formcontato__contacto {
+    flex-direction: column; /* Cambia a disposición en columna */
+    align-items: center;
+}
+
+.formcontato--esquerda {
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Añade espacio entre la imagen y el formulario */
+}
+
+.formcontato__img {
+    width: 80%; /* Ajusta el tamaño de la imagen */
+    max-width: 200px; /* Ajusta según el tamaño deseado */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.formcontato__text {
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    padding-left: 0;
+    text-align: center; /* Centra el texto */
+    position: relative; /* Añade posición relativa para el posicionamiento absoluto del botón */
+}
+
+.formcontato__title,
+.formcontato__subtext {
+    margin: 4% 0% 4% 6%; /* Ajusta los márgenes */
+    text-align: justify;
+}
+
+.formcontato__form {
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+.formcontato__input,
+.formcontato__textarea {
+    width: calc(100% - 40px); /* Asegura que las entradas ocupen todo el ancho menos el padding */
+    margin: 10px 20px; /* Ajusta los márgenes */
+    padding: 10px;
+}
+
+.formcontato__botao {
+    width: max-content; /* Asegura que el botón ocupe todo el ancho menos el padding */
+    margin: 2% 0% 0% 0%; /* Ajusta los márgenes */
+    padding: 10px;
+    position: relative; /* Mantiene la posición absoluta */
+    left: 20px; /* Ajusta el alineamiento a la izquierda */
+    bottom: -20px; /* Ajusta el alineamiento desde la parte inferior */
+    margin-inline-start: 1%;
+}
+
+
+/* Footer*/
+
+
+.footer {
+    width: 120%;
+    padding: 4% 1% 4% 1%; /* Ajusta el padding */
+    margin-right: 0%;
+    margin-left: 0%;
+    box-shadow: none; /* Elimina el box-shadow */
+    flex-direction: column; /* Alinea los elementos en columna */
+}
+
+.footer__rodape {
+    width: 100%;
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center;
+    text-align: center; /* Centra el texto */
+}
+
+.redes-sociales {
+    margin-bottom: 20px; /* Espacio entre los iconos y el texto */
+}
+
+.redes-sociales a {
+    margin: 0 10px; /* Margen horizontal entre los iconos */
+}
+
+.redes-sociales img {
+    width: 32px; /* Tamaño de los iconos */
+    height: 32px;
+}
+
+.creditos {
+    margin-top: 10px; /* Espacio entre los iconos y el texto */
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-bottom: 10px; /* Espacio entre los iconos y el texto */
+}
+
+}
+
+
+
+

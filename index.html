@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    <!-- Referencia de la hoja de estilo de Css -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonte del Proyecto Raleway -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <title> Mi Portafolio</title>
+    <link rel="icon" href="assets/Logo.png" type="image/png">
+    <style>
+        body {
+            perspective: 1000px;
+        }
+        .animated-box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation: move3d 5s infinite alternate;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes move3d {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+            100% {
+                transform: translate3d(100px, 100px, 100px);
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- Sección del Menú  -->
+    <div class="tudo">
+    <section class="menu">
+        <header class="menu__header">
+            <img src="assets/Logo2.svg">
+            <h3 class="menu__title">Estefany Salas</h3>
+        </header>
+        <nav>
+            <ul class="menu__list">
+                <li class="menu__list__item"><a href="#sobre-mi">Sobre mi</a></li>
+                <li class="menu__list__item"><a href="#skills">Skills</a></li>
+                <li class="menu__list__item"><a href="#hobbies">Hobbies</a></li>
+                <li class="menu__list__item"><a href="#formacion">Formación</a></li>
+                <li class="menu__list__item">
+                    <a href="#xp">Portafolio</a>
+                    <ul class="submenu">
+                        <li><a href="#ux-design">UX Design</a></li>
+                        <li><a href="#front-end">Front End</a></li>
+                    </ul>
+                </li>
+                <li class="menu__list__item"><a href="#contacto">estefany.sasi@gmail.com</a></li>
+                
+                
+              </ul>
+            
+        </nav>
+    </section>
+
+    <!-- Sección del Header/Title/Hero -->
+    <section class="title">
+        <div class="title__div">
+            <div class="title__container">
+                <h2 class="title__bio">Hola, mi nombre es Estefany Salas, </h2>
+                <p class="subtitle"><b>Soy diseñadora UX y estudiante de Front-end.</b></p>
+                <h3 class="title__subsection">Egresada de Laboratoria, actualmente soy participante del proyecto Oracle ONE en Alura Latam.</h3>
+                <ul class="title__network">
+                     <!-- redes sociales favoritas -->
+                     <li class="title__network__item"><a href="https://drive.google.com/file/d/1RXsbGrSxWzh_8CtlRk08h6U67BCv9Mdu/view?usp=drive_link">Currículum <img src="assets\arrow.png"></a></li>
+                    <li class="title__network__item"><a href="https://www.linkedin.com/in/estefany-salas/">Linkedin <img src="assets\arrow.png"></a></li>
+                    <li class="title__network__item"><a href="https://github.com/TechWitchUx">Github  <img src="assets\arrow.png"> </a></li>
+                    <li class="title__network__item"><a href="https://www.instagram.com/tech_witch_ux/">Instagram <img src="assets\arrow.png"></a></li>
+                    
+                </ul>
+            </div>
+            <img class="title__profile" src="assets/Profile.png" alt="Imagen de perfil">
+        </div>
+    </section>
+    
+    <!-- Sección sobre mi -->
+    <section class="about" id="sobre-mi">
+        <div class="about__container">
+            <div class="about__img about__img--right">
+            <img class="about__img1" src="assets/guitar.svg" 
+            alt="ukulele">
+        </div>
+        <div class="about__content">
+            <h3 class="about__title">Sobre mi</h3>
+            <p class="about__paragraph">En la vida, he transitado por dos senderos muy distintos: el amor por la escritura, inspirado por mi
+                inagotable creatividad e inventiva, y, por otro lado, ocho años de experiencia en ventas tratando con
+                una vasta diversidad de clientes. Esto me ha llevado a adquirir la habilidad, empatía y sensibilidad como
+                UX designer.  </p>
+            <p class="about__paragraph">En años anteriores estudié Lengua y Literaturas Hispánicas en la UNAM, Psicología en el Instituto Rosario Castellanos y Diseño de experiencia de usuario (Ux Design). Soy una apasionada de la creación literaria así como de tocar el ukulele en mi tiempo libre. Como es fácil de apreciar en mi carrera académica, mi curiosidad y carácter autodidacta me han servido para explorar diversos caminos y seguirme formando tanto profesional como personalmente. En el camino siempre busco ayudar a los demás con las habilidades que poseo para crear un mudo consciente y amigable para todo tipo de contextos. Actualmente soy una orgullosa egresada de Laboratoria.</p>
+            <!-- Si quieres, pon tú firma acá! -->
+        </div>
+        <div class="about__img about__img--left"></div>
+            <img class="about__img3" src="assets/escritura.svg" alt="Imagen izquierda">
+          </div>  
+        </div>
+    </section>
+
+    <!-- Sección de Skills -->
+    <h3 class="skills__title">Skills</h3>
+    <section class="skills" id="skills">
+            <div class="skills__line">
+                <div class="skills__box">
+                    <ul>
+                        <li class="skills__img"><img src="assets\htlm.png"></li>
+                        <li class="skills__name"> HTML 5</li>
+                    </ul>
+                </div>
+
+                <div class="skills__box">
+                    <ul>
+                        <li class="skills__img"> <img src="assets\js_icon.png" alt=""></li>
+                        <li class="skills__name">Javascript</li>
+                    </ul>
+                </div>
+
+                <div class="skills__box">
+                    <ul>
+                        <li class="skills__img"> <img src="assets/Figma_icon.png" alt=""></li>
+                        <li class="skills__name">Figma</li>
+                    </ul>
+                </div>
+
+                <div class="skills__box">
+                    <ul>
+                        <li class="skills__img"><img src="assets/trello_icon.png""></li>
+                        <li class="skills__name">Trello</li>
+                    </ul>
+                </div>
+
+                <div class="skills__box">
+                    <ul>
+                        <li class="skills__img"> <img src="assets/VS_icon.png" alt=""> </li>
+                        <li class="skills__name">Visual Studio</li>
+                    </ul>
+                </div>
+
+                <div class="skills__box">
+                    <ul>
+                        <li class="skills__img"> <img src="assets\css_icon.png" alt=""> </li>
+                        <li class="skills__name">CSS</li>
+                    </ul>
+                </div>
+        </div>
+    </section>
+
+    <!-- Sección de Hobbies -->
+    <section class="hobbies" id="hobbies">
+        <h3 class="hobbies__title">Hobbies</h3>
+            <div class="hobbies__line">
+                <div class="hobbies__box">
+                    <ul>
+                        <li class="hobbies__img"><img src="assets/write_icon.png"></li>
+                        <li class="hobbies__name"> Escribir</li>
+                    </ul>
+                </div>
+
+                <div class="hobbies__box">
+                    <ul>
+                        <li class="hobbies__img"> <img src="assets/ukulele_icon.png" alt=""></li>
+                        <li class="hobbies__name">Ukulele</li>
+                    </ul>
+                </div>
+
+                <div class="hobbies__box">
+                    <ul>
+                        <li class="hobbies__img"> <img src="assets\headphones_icon.png" alt=""></li>
+                        <li class="hobbies__name">Oir música</li>
+                    </ul>
+                </div>
+
+                <div class="hobbies__box">
+                    <ul>
+                        <li class="hobbies__img"><img src="assets\tv_icon.png" alt=""></li>
+                        <li class="hobbies__name">Películas</li>
+                    </ul>
+                </div>
+
+                <div class="hobbies__box">
+                    <ul>
+                        <li class="hobbies__img"> <img src="assets/read_icon.png" alt=""> </li>
+                        <li class="hobbies__name">Leer</li>
+                    </ul>
+                </div>
+
+                <div class="hobbies__box">
+                    <ul>
+                        <li class="hobbies__img"> <img src="assets/controller_icon.png""> </li>
+                        <li class="hobbies__name">Videojuegos</li>
+                    </ul>
+                </div>
+        </div>
+    </section>
+
+  <!-- Sección de Formación académica -->
+<section class="academic" id="formacion">
+    <h2 class="academic__title">Formación académica</h2>
+    <div class="academic__courses">
+        <div class="academic__courses__box">
+            <div class="academic__courses__item">
+                <div class="academic__courses__item__img-container">
+                    <img src="assets/UNAM_logo.png" alt="UFPR">
+                </div>
+                <div class="academic__courses__item__description">
+                    <h4>UNAM</h4>
+                    <h4> ~ Lengua y Literaturas Hispánicas ~ </h4>
+                    <p>2019</p>
+                </div>
+            </div>
+        </div>
+        <div class="academic__courses__box">
+            <div class="academic__courses__item">
+                <div class="academic__courses__item__img-container">
+                    <img src="assets/Laboratoria_logo.png" alt="Alura">
+                </div>
+                <div class="academic__courses__item__description">
+                    <h4>Laboratoria</h4>
+                    <h4>~ Ux Design ~ </h4>
+                    <p>Agosto - Diciembre </p>
+                    <p>2023 </p>
+                </div>
+            </div>
+        </div>
+        <div class="academic__courses__box">
+            <div class="academic__courses__item">
+                <div class="academic__courses__item__img-container">
+                    <img src="assets/aluraoracle_logo.png" alt="UFRJ">
+                </div>
+                <div class="academic__courses__item__description">
+                    <h4> Oracle - Alura </h4>
+                    <h4> ~ Front End ~ </h4>
+                    <p>En curso - Julio 2024</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        
+
+<!-- Sección de Experiencia Profesional/Proyectos-->
+<section class="experience__section hoverTarget" id="xp">
+<h2 class="experience__section__title" >Experiencia Profesional </h2>
+</section> 
+<section class="experience__Valia" id="ux-design">
+<h2>UX/UI Design</h2>
+<section class="experience__section__outer__valia hoverTarget">
+    <div class="experience__section__inner__valia hoverTarget"></div>
+        <seccion class="experience__box__valia hoverTarget">
+        <img class="experience__img__valia" src="assets/valia3.png">
+            <div class="experience__info-container">
+                <h2 class="experience__title">Valia</h2>
+                <div class="experience__text">
+                <h3 class="experience__text">En este proyecto se utilizó: </h3>
+                <ul class="experience__list">
+                    <li> 🔹 Figma</li>
+                    <li> 🔹 Trello</li>
+                    <li> 🔹 Excel</li>
+                    <li> 🔹 Benchmarking</li>
+                    <li> 🔹 Heuristicas</li>
+                    <li> 🔹 Userflow</li>
+                    <li> 🔹 Mockups </li>
+                    <li> 🔹 IPC </li>
+                </ul>
+            </div>
+                    <div class="experience__description">
+                            <!-- Pon el enlace del proyecto en Github o GithubPages -->
+                            <span class="experience__repo"><a href="https://www.figma.com/file/V8lktmwevkhelM7KvjWLh0/Valia%2FDiversity-Tech-(Copy)?type=design&node-id=221%3A59&mode=design&t=AhXXNOF0nYoTFsAc-1"><button class="experience__botao--repo">Repositório</button></a></span>
+                            <span class="experience__demo"><a href="https://www.figma.com/proto/V8lktmwevkhelM7KvjWLh0/Valia%2FDiversity-Tech-(Copy)?page-id=221%3A59&node-id=1174-2084&starting-point-node-id=1174%3A2084&scaling=scale-down&mode=design&t=KtC9vofKYQAyzT7T-1"><button class="experience__botao--demo__valia">Ver demo</button></a></span>
+                        </div>  
+                        <div class="experience__extra-button">
+                            <span class="experience__extra__valia"><a href="https://www.figma.com/proto/bonphooBqF1vGpVYEp8qTL/Caso-de-Estudio%2FValia?page-id=0%3A1&node-id=3-493&viewport=-3115%2C-425%2C0.66&t=LlKueTKmzxSE4AzG-1&scaling=min-zoom&starting-point-node-id=3%3A493"><button class="experience__botao--extra__valia">Caso de estudio</button></a></span>
+                        </div>
+                    </div>
+                </div>
+            </section>  
+
+        </section>  
+        </div>  
+</section>      
+    <section class="experience__container__heyBanco">
+        <section class="experience__section__outer__heyBanco hoverTarget">
+            <div class="experience__section__inner__heyBanco hoverTarget">
+                <section class="experience__section__heyBanco hoverTarget">
+                    <div class="experience__info-container__heyBanco">
+                        <h2 class="experience__title">Hey Banco</h2>
+                        <div class="experience__text">
+                            <h3>En este proyecto se utilizó:</h3>
+                            <ul class="experience__list">
+                                <li>🔹 Figma</li>
+                                <li>🔹 Trello</li>
+                                <li>🔹 Design thinking</li>
+                                <li>🔹 Benchmarking</li>
+                                <li>🔹 Heuristicas</li>
+                                <li>🔹 Userflow</li>
+                                <li>🔹 Mockups</li>
+                                <li>🔹 Usability Testing </li>
+                            </ul>
+                        </div>
+                        <div class="experience__description">
+                            <span class="experience__repo">
+                                <a href="https://www.figma.com/design/ziegh99cFYXBiX1fjrNr4m/P1.-Final-Hey-banco-%2F-Las-Chilangas?node-id=0-1&t=ffUnnIIPjljM5K1Y-1">
+                                    <button class="experiencia__botao--repo__heyBanco">Repositório</button>
+                                </a>
+                            </span>
+                            <span class="experience__demo">
+                                <a href="https://www.figma.com/proto/ziegh99cFYXBiX1fjrNr4m/P1.-Final-Hey-banco-%2F-Las-Chilangas?page-id=179%3A2&node-id=848-1204&viewport=328%2C273%2C0.15&t=9O7inpXkCxPcrcuz-1&scaling=scale-down&starting-point-node-id=185%3A184">
+                                    <button class="experience__botao--demo__heyBanco">Ver demo</button>
+                                </a>
+                            </span>
+                        </div>
+                        <div class="experience__extra-button__heyBanco">
+                            <span class="experience__extra">
+                                <a href="https://www.figma.com/proto/OZ5JjS6UIb6VRNrjQsfiV3/Caso-de-Estudio%2FHey-Banco?page-id=0%3A1&node-id=6-28&viewport=20%2C343%2C0.86&t=elR5HIH04vKvdyr4-1&scaling=min-zoom"><button class="experience__botao--extra__heyBanco">Caso de estudio</button></a>
+                            </span>
+                        </div>
+                    </div>
+                    <img class="experience__img__heyBanco" src="assets/heybancoimg.png">
+                </div>
+        </section>
+    </section>
+    
+
+
+
+            <section class="experience__ns" id="front-end">
+            <h2>Front End</h2>
+            <section class="experience__section__outer__ns hoverTarget">
+                <div class="experience__section__inner__ns hoverTarget"></div>
+                    <seccion class="experience__box__ns hoverTarget">
+                    <img class="experience__img__ns" src="assets/numerosecreto.png">
+                        <div class="experience__info-container__ns">
+                            <h2 class="experience__title__ns">Número Secreto</h2>
+                            <div class="experience__text__ns">
+                            <h3 class="experience__text__ns">En este proyecto se utilizó: </h3>
+                            <ul class="experience__list">
+                                <li> 🔹 JavaScript</li>
+                                <li> 🔹 Trello</li>
+                                <li> 🔹 Visual Studio</li>
+                                <li> 🔹 120 hrs.</li>
+                                <li> 🔹 HTML</li>
+                                <li> 🔹 CSS</li>
+                                <li> 🔹 Metodology Agile</li>
+                                <li> 🔹 Github</li>
+                            </ul>
+                        </div>
+                                <div class="experience__description__ns">
+                                        <!-- Pon el enlace del proyecto en Github o GithubPages -->
+                                        <span class="experience__repo__ns"><a href="https://github.com/TechWitchUx/Juego-Secreto"><button class="experience__botao--repo__ns">Repositório</button></a></span>
+                                        <span class="experience__demo__ns"><a href="https://www.figma.com/proto/1N9Z6h7zNagxuw5pj0PO72/An%C3%A1lisis%2FN%C3%BAmero-Secreto?page-id=0%3A1&node-id=8-6&viewport=229%2C354%2C0.52&t=L4f4fv8t4apbyabq-1&scaling=min-zoom"><button class="experience__botao--demo__ns">Análisis</button></a></span>
+                                    </div>  
+                                    <div class="experience__extra-button__ns">
+                                        <span class="experience__extra__ns"><a href="https://juego-secreto-umber.vercel.app/"><button class="experience__botao--extra__ns">¡Juega ahora!</button></a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>  
+            
+                    </section>  
+                    </div>  
+
+        <section class="experience__container__barberiaAlura hoverTarget">
+        <section class="experience__section__outer__barberiaAlura hoverTarget">
+            <div class="experience__section__inner__barberiaAlura hoverTarget">
+                <section class="experience__section__barberiaAlura hoverTarget">
+                    <div class="experience__info-container__barberiaAlura">
+                        <h2 class="experience__title">Barbería Alura</h2>
+                        <div class="experience__text">
+                            <h3>En este proyecto se utilizó:</h3>
+                            <ul class="experience__list">
+                                <li>🔹 HTML</li>
+                                <li>🔹 Trello</li>
+                                <li>🔹 JavaScript</li>
+                                <li>🔹 80 hrs.</li>
+                                <li>🔹 CSS</li>
+                                <li>🔹 Github</li>
+                                <li>🔹 Mapa de sitio</li>
+                                <li>🔹 Visual Studio</li>
+                            </ul>
+                        </div>
+                        <div class="experience__description">
+                            <span class="experience__repo">
+                                <a href="https://github.com/TechWitchUx/Barberia_Alura-">
+                                    <button class="experiencia__botao--repo__barberiaAlura">Repositório</button>
+                                </a>
+                            </span>
+                            <span class="experience__demo">
+                                <a href="https://techwitchux.github.io/Barberia_Alura-/">
+                                    <button class="experience__botao--demo__barberiaAlura">Ver demo</button>
+                                </a>
+                            </span>
+                        </div>
+                        <div class="experience__extra-button__barberiaAlura">
+                            <span class="experience__extra">
+                                <a href="https://www.figma.com/proto/WJZoy5Uqr1fPWBrRUVuAqz/Caso-de-Estudio%2FBarberia-Alura?page-id=0%3A1&node-id=8-6&viewport=23%2C-182%2C0.71&t=XbE682O7gZPe5egF-1&scaling=min-zoom"><button class="experience__botao--extra__barberiaAlura">Caso de estudio</button></a>
+                            </span>
+                        </div>
+                    </div>
+                    <img class="experience__img__barberiaAlura" src="assets/BarberiaAlura.png">
+                </div>
+        </section>
+    </section>
+      <!-- Sección de Contacto -->
+    <section class="formcontato" id="contacto">
+            <div class="formcontato__contacto">
+                <div class="formcontato--esquerda">
+                    <img class="formcontato__img" src="assets/card.png" alt="Contacto">
+                </div>
+                <div class="formcontato__text">
+                    <h2 class="formcontato__title">Contacto</h2>
+                    <h3 class="formcontato__subtext">¿Deseas comunicarte conmigo?</h3>
+                    <h3 class="formcontato__subtext">Por favor, completa el siguiente formulario y te responderé a la brevedad.</h3>
+                    <form id="form">
+                        <div class="mb-3">
+                         <label for="exampleInputEmail" class="form-label"></label>
+                         <input type="text" class="form-control" placeholder="Nombre" name="name">
+                        </div>
+            
+                        <div class="mb-3">
+                         <label for="exampleInputPassword1" class="form-label"></label>
+                         <input type="text" class="form-control" placeholder="Apellido" name="last">
+                        </div>
+            
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label"></label>
+                          <input type="number" class="form-control" placeholder="Teléfono" name="phone">
+                        </div>
+            
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label"></label>
+                          <input type="email" class="form-control" placeholder="E-mail" name="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label"></label>
+                            <textarea type="text" class="form-control" placeholder="Asunto" name="subject"></textarea> 
+                          </div>
+            
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label"></label>
+                          <textarea type="text" class="form-control" placeholder="Mensaje" name="mensagge"></textarea> 
+                        </div>
+                        <input type="submit" class= "btn btn-success" id="button" value="ENVIAR MENSAJE" >
+                   </form>
+                   <script type="text/javascript"
+                   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+                   
+                   <script type="text/javascript">
+                   emailjs.init('NZtsG3AlYAd2TR4Qf')
+                   </script>
+                   
+                </div>
+            </div>
+        </section>
+
+    
+<!-- Sección de Footer -->
+<!-- Sección de Footer -->
+<section class="footer">
+    <div class="footer__rodape">
+        <!-- Iconos de redes sociales -->
+        <div class="redes-sociales">
+            <a href="https://www.instagram.com/tech_witch_ux/" target="_blank"><img class="icon-special" src="assets/Intstagram.png" alt="Instagram"></a>
+            <a href="https://wa.link/ugl7fu" target="_blank"><img class="icon-general" src="assets/WhatsApp.png" alt="WhatsApp"></a>
+            <a href="https://www.linkedin.com/in/estefany-salas/" target="_blank"><img class="icon-general" src="assets/Linkdin.png" alt="LinkedIn"></a>
+            <a href="mailto:estefany.sasi@gmail.com?subject=Hola!%20Me%20gustar%C3%ADa%20hablarte%20sobre.....%20" target="_blank"><img class="icon-general" src="assets/Gmail.png" alt="Gmail"></a>
+            <a href="https://claseslaboratoria.slack.com/team/U05HXFN3BM2" target="_blank"><img class="icon-general" src="assets/Slack.png" alt="Slack"></a>
+            <div class="creditos">
+                <p>“Nuevas perspectivas en la experiencia de usuario.”</p>
+                <p>Desarrollado y rediseñado por Estefany Salas</p>
+                <p>"Responsive Design"</p>
+                <p>~ 2024 ~</p>
+                
+            </div>
+</section>
+ <!-- Script del documento JavaScript -->
+<!-- Añadir la biblioteca de EmailJS -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hoverTargets = document.querySelectorAll('.hoverTarget');
+
+        function handleHover() {
+            console.log('Hover activado'); // Aquí agregas el console.log para verificar
+            this.classList.add('hover-effect');
+            setTimeout(() => {
+                this.classList.remove('hover-effect');
+            }, 40000); // Duración del efecto hover (40 segundos)
+
+            // Deshabilitar el hover temporalmente
+            this.removeEventListener('mouseover', handleHover);
+
+            // Reactivar el hover después de 20 segundos
+            setTimeout(() => {
+                this.addEventListener('mouseover', handleHover);
+            }, 20000); // 20 segundos
+        }
+
+        function enableHoverEffect() {
+            hoverTargets.forEach(hoverTarget => {
+                hoverTarget.addEventListener('mouseover', handleHover);
+            });
+        }
+
+        function disableHoverEffect() {
+            hoverTargets.forEach(hoverTarget => {
+                hoverTarget.removeEventListener('mouseover', handleHover);
+            });
+        }
+
+        function checkMediaQuery() {
+            const mediaQuery = window.matchMedia('(min-width: 250px) and (max-width: 768px)');
+            if (mediaQuery.matches) {
+                disableHoverEffect();
+            } else {
+                enableHoverEffect();
+            }
+        }
+
+        window.addEventListener('resize', checkMediaQuery);
+        checkMediaQuery();
+    });
+</script>
+
+</body>
+
+<script
+src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+crossorigin="anonymous"
+></script>
+<script src="app.js/script.js"></script>
+
+<script src="app.js/validacion.js"></script>
+
+</html>
